@@ -1,5 +1,5 @@
 {
-  "name": "@ms/mcss",
+  "name": "ms-css",
   "version": "1.0.0",
   "description": "a simple css library",
   "main": "gulpfile.mjs",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/masoomulhaqs/mcss.git"
+    "url": "git+https://github.com/masoomulhaqs/ms-css.git"
   },
   "keywords": [],
   "author": "Masoom Ul Haq S <masoomulhaqs@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/masoomulhaqs/mcss/issues"
+    "url": "https://github.com/masoomulhaqs/ms-css/issues"
   },
-  "homepage": "https://github.com/masoomulhaqs/mcss#readme",
+  "homepage": "https://github.com/masoomulhaqs/ms-css#readme",
   "dependencies": {
     "@ng-select/ng-select": "^13.2.0",
     "bootstrap": "^5.3.3",

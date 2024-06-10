@@ -1,4 +1,4 @@
-# @ms/mcss
+# ms-css
 
 > a simple css library
 
@@ -13,13 +13,13 @@ Table Of Contents:
 Install with npm:
 
 ```bash
-npm install @ms/mcss
+npm install ms-css
 ```
 
 Install using yarn:
 
 ```bash
-yarn add @ms/mcss
+yarn add ms-css
 ```
 
 ## License
