@@ -1,0 +1,134 @@
+.ms-main-header {
+  padding: 1rem;
+  transition: all 0.3s;
+  position: relative;
+  z-index: 5;
+  background: var(--ms-header-bg);
+
+  &--sticky {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  &#{&}--is-below-offset {
+    background: var(--ms-header-bg);
+    box-shadow: var(--ms-box-shadow);
+  }
+
+  .btn-hamburger {
+    width: var(--ms-header-mobile-hamburger-width);
+
+    @include media-breakpoint-up("lg") {
+      display: none;
+    }
+  }
+
+  .nav {
+    @include media-breakpoint-down("lg") {
+      flex-direction: column;
+    }
+
+    .nav-link {
+      color: var(--ms-header-link-color);
+      text-transform: uppercase;
+      font-weight: var(--ms-header-link-font-weight);
+      letter-spacing: var(--ms-header-link-letter-spacing);
+
+      @include media-breakpoint-down("lg") {
+        --ms-nav-link-padding-y: var(--ms-header-mobile-link-padding-y);
+        --ms-nav-link-padding-x: var(--ms-header-mobile-link-padding-x);
+      }
+    }
+  }
+
+  &__navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    @include media-breakpoint-up("lg") {
+      justify-content: flex-start;
+    }
+  }
+
+  &__nav {
+    &-wrapper {
+      @include media-breakpoint-down("lg") {
+        visibility: hidden;
+        position: fixed;
+        background: var(--ms-header-mobile-offcanvas-bg);
+        z-index: 1000;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        transform: translateX(-70%);
+        opacity: 0;
+        transition: all 0.3s;
+        pointer-events: none;
+      }
+
+      @include media-breakpoint-up("lg") {
+        visibility: visible;
+        opacity: 1;
+        pointer-events: all;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    &-li {
+      border-bottom: 1px solid var(--ms-light);
+      @include media-breakpoint-up("lg") {
+        border-bottom: 0;
+      }
+
+      &--back {
+        display: block;
+
+        @include media-breakpoint-up("lg") {
+          display: none;
+        }
+
+        .nav-link {
+          text-transform: lowercase;
+        }
+      }
+    }
+  }
+
+  &__section {
+    &-right {
+      text-align: right;
+
+      &--mobile {
+        display: flex;
+        gap: var(--ms-header-mobile-icons-gap);
+
+        @include media-breakpoint-up("lg") {
+          display: none;
+        }
+      }
+
+      &--desktop {
+        display: none;
+
+        @include media-breakpoint-up("lg") {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &#{&}--open {
+    .ms-main-header__nav-wrapper {
+      transform: translateX(0%);
+      visibility: visible;
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+}

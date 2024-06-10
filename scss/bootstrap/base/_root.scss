@@ -1,0 +1,114 @@
+:root {
+  // Common
+  --ms-font-family-roboto: #{$font-family-base};
+  --ms-font-family-roboto-slab: #{$font-family-heading};
+  --ms-font-family-body: #{$font-family-base};
+  --ms-font-family-heading: #{$font-family-heading};
+  --ms-color-tertiary: #{$tertiary};
+
+  // Shadows
+  --ms-box-shadow: #{$box-shadow-sm};
+  --ms-box-shadow-lg: #{$box-shadow-lg};
+  --ms-box-shadow-inset: #{$box-shadow-inset};
+
+  // Sizes
+  // --ms-font-size-xxl: #{rem(78)};
+  // --ms-font-size-xl: #{rem(68)};
+  // --ms-font-size-lg: #{rem(40)};
+  --ms-font-size-xxl: #{rem(60)};
+  --ms-font-size-xl: #{rem(48)};
+  --ms-font-size-lg: #{rem(36)};
+  --ms-font-size-md: #{rem(20)};
+  --ms-font-size-default: #{rem(16)};
+  --ms-font-size-sm: #{rem(14)};
+
+  // Body
+  --ms-body-standalone-bg: #e7ecf3;
+  --ms-body-color: #{$dark};
+  --ms-body-font-family: var(--ms-font-family-body);
+
+  // Header
+  --ms-header-bg: #{$light};
+  // --ms-header-height: -72px;
+  --ms-header-link-font-weight: 700;
+  --ms-header-link-letter-spacing: 0.115em;
+  --ms-header-link-color: var(--ms-dark);
+  --ms-header-mobile-link-padding-y: 0.85rem;
+  --ms-header-mobile-link-padding-x: 1.5rem;
+  --ms-header-mobile-hamburger-width: 65px;
+  --ms-header-mobile-icons-gap: 1rem;
+  --ms-header-mobile-offcanvas-bg: #fff;
+
+  // Footer
+  --ms-footer-bg: var(--ms-dark);
+  --ms-footer-color: var(--ms-light);
+  --ms-footer-link-font-weight: 700;
+  --ms-footer-link-color: #fff;
+  --ms-footer-link-letter-spacing: 0.115em;
+
+  // Icons
+  --ms-icon-font-size: #{$icon-font-size};
+
+  // Buttons
+  --ms-btn-letter-spacing: 0.05em;
+  --ms-btn-icon-font-size: #{$btn-icon-font-size};
+  --ms-btn-icon-size: 30px;
+  --ms-btn-icon-border-radius: 30px;
+
+  --ms-btn-group-gap: 10px;
+  --ms-btn-group-icon-font-size: 16px;
+
+  // Tables
+  --ms-table-font-size: #{$table-font-size};
+  --ms-table-icon-font-size: 16px;
+
+  --ms-table-filters-font-size: 12px;
+  --ms-table-filters-color: var(--ms-gray);
+
+  --ms-table-footer-font-size: 12px;
+  --ms-table-footer-gap: 1rem;
+
+  // Overlays
+  --ms-overlay-bg-default: #{$overlay-bg-default};
+
+  //  Hero Banner
+  --ms-hero-banner-height: 480px;
+  --ms-hero-banner-bg: #{$light};
+  --ms-hero-banner-color: #{$dark};
+
+  // Infograph
+  --ms-infograph-image-border-radius: 0 100px 0 0;
+
+  // Cards
+  --ms-card-collection-height: 410px;
+
+  // Ratings
+  --ms-ratings-theme-color: var(--ms-warning);
+
+  // Section
+  --ms-section-pre-text-font-size: 0.8rem;
+  --ms-section-pre-text-font-weight: 500;
+  --ms-section-pre-text-color: var(--ms-success);
+  --ms-section-title-font-size: var(--ms-font-size-xl);
+  --ms-section-desc-font-size: var(--ms-font-size-md);
+  --ms-section-header-margin-bottom: 4rem;
+  --ms-section-footer-text-align: center;
+  --ms-section-footer-margin-top: 1.5rem;
+
+  // Products
+  --ms-product-card-image-width: 100%;
+  --ms-product-card-image-height: 340px;
+  --ms-product-card-rating-spacing-bottom: 0.5rem;
+  --ms-product-card-price-spacing: 10px;
+  --ms-product-card-price-actual-color: var(--ms-gray-500);
+  --ms-product-card-price-discounted-font-weight: 700;
+
+  // Testimonial
+  --ms-card-testimonial-min-height: 230px;
+
+  // Spinners
+  --ms-spinner-radius: #{$spinner-radius};
+  --ms-spinner-border-width: #{$spinner-border-width};
+  --ms-spinner-color: #{$spinner-color};
+  --ms-spinner-alt-color: #{$spinner-alt-color};
+}

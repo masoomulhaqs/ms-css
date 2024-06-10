@@ -1,0 +1,9 @@
+.card {
+  &-title {
+    font-family: var(--ms-font-family-roboto-slab);
+
+    a {
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.ms-error-page {
+  &__body {
+    text-align: center;
+  }
+
+  &__icon {
+    font-size: 4rem;
+    color: var(--ms-danger);
+
+    &-wrapper {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__content {
+    margin-bottom: 1.5rem;
+  }
+
+  &__footer {
+    margin-top: 3rem;
+  }
+}

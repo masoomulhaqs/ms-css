@@ -1,0 +1,38 @@
+.ms-section {
+  &__container {
+    @include section-spacing-y();
+  }
+
+  &__header {
+    margin-bottom: var(--ms-section-header-margin-bottom);
+    text-align: center;
+
+    &-pre-text {
+      text-transform: uppercase;
+      font-size: var(--ms-section-pre-text-font-size);
+      font-weight: var(--ms-section-pre-text-font-weight);
+      margin-bottom: 0.5rem;
+      display: block;
+      color: var(--ms-section-pre-text-color);
+    }
+
+    &-title {
+      margin-bottom: 0.8rem;
+      font-size: var(--ms-section-title-font-size);
+    }
+
+    &-desc {
+      font-size: var(--ms-section-desc-font-size);
+    }
+  }
+
+  &__footer {
+    // text-align: var(--ms-section-footer-text-align;
+    margin-top: var(--ms-section-footer-margin-top);
+  }
+
+  &__sub-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+}

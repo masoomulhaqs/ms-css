@@ -1,0 +1,16 @@
+.modal {
+  &-body {
+    .modal-footer {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+
+    &--busy {
+      opacity: 0.5;
+      cursor: wait;
+      * {
+        pointer-events: none;
+      }
+    }
+  }
+}

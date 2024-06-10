@@ -1,0 +1,38 @@
+.btn {
+  text-transform: uppercase;
+  letter-spacing: var(--ms-btn-letter-spacing);
+
+  &-icon {
+    --ms-nav-link-font-size: var(--ms-btn-icon-font-size);
+    @extend .nav-link;
+
+    width: var(--ms-btn-icon-size);
+    height: var(--ms-btn-icon-size);
+    border-radius: var(--ms-btn-icon-border-radius);
+    line-height: 0;
+
+    > i {
+      font-size: inherit;
+    }
+
+    &-group {
+      display: inline-flex;
+      flex-direction: row;
+      gap: var(--ms-btn-group-gap);
+
+      &--simple {
+        --ms-btn-group-gap: 0px;
+
+        .btn-icon {
+          font-size: var(--ms-btn-group-icon-font-size);
+        }
+      }
+    }
+  }
+}
+
+@each $breakpoint, $value in $grid-breakpoints {
+  .btn-full-below-#{$breakpoint} {
+    width: 100%;
+  }
+}

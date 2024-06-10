@@ -1,0 +1,47 @@
+{
+  "name": "@ms/mcss",
+  "version": "1.0.0",
+  "description": "a simple css library",
+  "main": "gulpfile.mjs",
+  "scripts": {
+    "build": "gulp build",
+    "watch": "gulp",
+    "docs": "cd docs && npx http-server --port=1414"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/masoomulhaqs/mcss.git"
+  },
+  "keywords": [],
+  "author": "Masoom Ul Haq S <masoomulhaqs@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/masoomulhaqs/mcss/issues"
+  },
+  "homepage": "https://github.com/masoomulhaqs/mcss#readme",
+  "dependencies": {
+    "@ng-select/ng-select": "^13.2.0",
+    "bootstrap": "^5.3.3",
+    "line-awesome": "^1.3.0"
+  },
+  "devDependencies": {
+    "conventional-changelog-cli": "^5.0.0",
+    "conventional-github-releaser": "^1.1.7",
+    "conventional-recommended-bump": "^10.0.0",
+    "execa": "^9.2.0",
+    "gulp": "^5.0.0",
+    "gulp-autoprefixer": "^9.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-ignore": "^3.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "sass": "^1.77.4",
+    "util": "^0.12.5"
+  },
+  "engines": {
+    "node": ">= 18",
+    "npm": ">= 8"
+  }
+}

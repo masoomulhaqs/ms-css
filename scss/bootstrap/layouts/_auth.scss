@@ -1,0 +1,73 @@
+.ms-auth-layout {
+  &__container {
+    --ms-gutter-x: 5rem;
+    @extend .container-fluid;
+
+    display: block;
+    background: var(--ms-dark);
+
+    @include auth-layout-theme() {
+    }
+  }
+
+  &__row {
+    @include auth-layout-theme() {
+      --ms-gutter-x: 5rem;
+      @extend .row;
+
+      min-height: 100vh;
+    }
+  }
+
+  &__col {
+    @include auth-layout-theme() {
+      @extend .col-12;
+    }
+
+    &--image {
+      @include auth-layout-theme() {
+        @extend .col-lg-7;
+        // @extend .d-none;
+        // @extend .d-lg-flex;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+        // background: url("../../../assets/images/tourism/beach.svg") no-repeat center;
+        // background-size: auto 60%;
+        // mix-blend-mode: exclusion;
+        position: relative;
+        &:after {
+          content: "";
+          // background: url("../../../assets/images/wave-001.svg") no-repeat bottom center;
+          height: 300px;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          background-size: 100%;
+          filter: blur(3px);
+          opacity: 0.3;
+          pointer-events: none;
+        }
+
+        img {
+          @include media-breakpoint-down('lg') {
+            width: 60px;
+          }
+        }
+      }
+    }
+    &--form {
+      @include auth-layout-theme() {
+        @extend .col-lg-5;
+        background-color: var(--ms-white);
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@each $color, $value in $badge-bg-colors {
+  .badge-#{$color} {
+    background-color: $value;
+  }
+}
+
+@each $color, $value in $badge-text-colors {
+  .badge-#{$color} {
+    --ms-badge-color: #{$value};
+  }
+}
+
+button.badge {
+  border: 0;
+}

@@ -1,0 +1,16 @@
+.ms-not-found-page {
+  &__body {
+    text-align: center;
+  }
+
+  &__image {
+    &-wrapper {
+      max-width: 360px;
+      margin: 0 auto 3rem;
+    }
+  }
+
+  &__content {
+    margin-bottom: 1.5rem;
+  }
+}

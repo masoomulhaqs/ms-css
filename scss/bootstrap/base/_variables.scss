@@ -1,0 +1,63 @@
+// Fonts
+$font-family-default:
+  system-ui,
+  -apple-system,
+  "Segoe UI",
+  Roboto,
+  "Helvetica Neue",
+  "Noto Sans",
+  "Liberation Sans",
+  Arial,
+  sans-serif,
+  "Apple Color Emoji",
+  "Segoe UI Emoji",
+  "Segoe UI Symbol",
+  "Noto Color Emoji" !default;
+
+$font-family-base: $font-family-default !default;
+$font-family-heading: $font-family-default !default;
+
+// Buttons
+$btn-icon-font-size: 14px !default;
+
+// Badges
+$badge-border-radius: 4px !default;
+$badge-bg-colors: (
+  "info": #c0eef7,
+  "secondary": #eeeff0,
+  "primary": #c7b1eb,
+  "warning": #ffcfa3,
+  "success": #c9eae6,
+  "danger": #efc0c0,
+) !default;
+
+$badge-text-colors: (
+  "info": #0a6273,
+  "secondary": #6c757d,
+  "primary": #520dc2,
+  "warning": #e07a1b,
+  "success": #009b88,
+  "danger": #c20a0a,
+) !default;
+
+// Cards
+$card-border-radius: 0 !default;
+
+// Overlays
+$overlay-bg-default: rgba(#000, 0.25) !default;
+
+// Spinners
+$spinner-radius: 50px;
+$spinner-border-width: 5px;
+$spinner-color: $primary;
+$spinner-alt-color: rgba($spinner-color, 0.15);
+
+// Icons
+$icon-font-size: 20px !default;
+
+// Forms
+$custom-form-input-controls: ms-input, ms-textarea;
+$custom-form-select-controls: ms-select;
+
+// Tables
+$table-font-size: 14px;

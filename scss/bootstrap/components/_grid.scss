@@ -1,0 +1,22 @@
+.container {
+  &#{&}--page {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  &#{&}--contact-page {
+    --ms-gutter-x: 4rem;
+
+    @include media-breakpoint-down("lg") {
+      --ms-gutter-x: 1.5rem;
+    }
+
+    > .row {
+      --ms-gutter-x: 4rem;
+
+      @include media-breakpoint-down("lg") {
+        --ms-gutter-x: 1.5rem;
+      }
+    }
+  }
+}

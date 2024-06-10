@@ -1,0 +1,38 @@
+.page {
+  &__title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__header {
+    padding: 3rem;
+    margin-top: 0;
+    text-align: center;
+    background: var(--ms-color-tertiary);
+  }
+}
+
+.fs {
+  &--xxl {
+    font-size: var(--ms-font-size-xxl);
+  }
+  &--xl {
+    font-size: var(--ms-font-size-xl);
+  }
+  &--lg {
+    font-size: var(--ms-font-size-lg);
+  }
+  &--md {
+    font-size: var(--ms-font-size-md);
+  }
+}
+
+.sticky-item {
+  &__image {
+    display: block;
+    width: 130px;
+    height: 100px;
+    background: transparent no-repeat center;
+    background-size: 100%;
+  }
+}

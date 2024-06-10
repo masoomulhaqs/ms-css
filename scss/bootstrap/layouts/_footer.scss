@@ -1,0 +1,17 @@
+.ms-main-footer {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-color: var(--ms-footer-bg);
+  color: var(--ms-footer-color);
+
+  .nav {
+    margin-bottom: 2rem;
+
+    a {
+      color: var(--ms-footer-link-color);
+      text-transform: uppercase;
+      font-weight: var(--ms-footer-link-font-weight);
+      letter-spacing: var(--ms-footer-link-letter-spacing);
+    }
+  }
+}

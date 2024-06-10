@@ -1,0 +1,9 @@
+.vscode/
+docs/
+CHANGELOG.md
+.editorconfig
+.eslintrc.json
+.gitignore
+.travis.yml
+gulpfile.mjs
+yarn-error.log

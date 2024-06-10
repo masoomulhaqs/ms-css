@@ -1,0 +1,204 @@
+table {
+  font-size: var(--ms-table-font-size);
+
+  > :not(caption) > * > * {
+    &:first-child {
+      padding-left: 2rem;
+    }
+    &:last-child {
+      padding-right: 2rem;
+    }
+  }
+
+  th {
+    // TODO: This can be moved to feature file
+    &.th--revisions {
+      width: 90px;
+    }
+
+    &.th-heading-actions {
+      text-align: center;
+    }
+
+    &.th-heading-sortable {
+      cursor: pointer;
+
+      &:after {
+        content: "\f0dc";
+        font-family: "Line Awesome Free";
+        font-weight: 900;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        display: var(--fa-display, inline-block);
+        font-style: normal;
+        font-variant: normal;
+        line-height: 1;
+        text-rendering: auto;
+        margin-left: 0.25rem;
+        font-size: var(--ms-table-icon-font-size);
+      }
+
+      &--asc {
+        &:after {
+          content: "\f0de";
+        }
+      }
+
+      &--desc {
+        &:after {
+          content: "\f0dd";
+        }
+      }
+    }
+  }
+
+  td {
+    &.td-column-actions {
+      text-align: center;
+    }
+  }
+}
+
+.ms-table {
+  display: block;
+  background: $white;
+  border-radius: $border-radius;
+  padding: 2rem;
+  @extend .shadow;
+
+  &__header {
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    margin-bottom: 0;
+  }
+
+  .table {
+    --ms-table-striped-bg: rgba(0, 0, 0, 0.03);
+    --ms-table-hover-bg: rgba(0, 0, 0, 0.03);
+    margin-bottom: 0;
+
+    &-responsive {
+      margin-left: -2rem;
+      margin-right: -2rem;
+    }
+  }
+
+  .btn-table-action {
+    min-width: 110px;
+  }
+
+  thead {
+    th {
+      border-bottom: 0;
+    }
+  }
+
+  tbody {
+    td {
+      vertical-align: middle;
+    }
+  }
+
+  &__search {
+    position: relative;
+
+    > i {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      z-index: 1;
+      font-size: var(--ms-table-icon-font-size);
+      margin-top: 1px;
+      color: $black;
+      opacity: 0.7;
+    }
+
+    .form-control-table {
+      min-width: 260px;
+      padding-left: 32px;
+    }
+  }
+
+  &__filters {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+
+    ng-select {
+      min-width: 90px;
+      .ng-value {
+        font-weight: 500;
+        color: var(--ms-table-filters-color);
+      }
+      .ng-arrow-wrapper .ng-arrow {
+        border-color: var(--ms-table-filters-color) transparent transparent;
+      }
+    }
+
+    .btn.btn-action {
+      display: inline-flex;
+      gap: 0.35rem;
+      align-items: center;
+      font-weight: 500;
+      text-transform: none;
+      min-height: 28px;
+      --ms-btn-hover-color: var(--ms-btn-color);
+      --ms-btn-hover-bg: var(--ms-btn-bg);
+      --ms-btn-hover-border-color: var(--ms-btn-border-color);
+      --ms-btn-active-color: var(--ms-btn-color);
+      --ms-btn-active-bg: var(--ms-btn-bg);
+      --ms-btn-active-border-color: var(--ms-btn-border-color);
+
+      > i {
+        font-size: var(--ms-table-icon-font-size);
+      }
+    }
+
+    &-col {
+      font-size: var(--ms-table-filters-font-size);
+
+      &--left {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        margin-right: auto;
+      }
+
+      &--right {
+        width: 100%;
+        max-width: 400px;
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--ms-table-footer-gap);
+    margin-top: 1.5rem;
+    font-size: var(--ms-table-footer-font-size);
+  }
+
+  &__loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.8);
+    color: #9ea1a4;
+  }
+}
