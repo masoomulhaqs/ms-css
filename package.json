@@ -1,16 +1,17 @@
 {
-  "name": "ms-css",
+  "name": "@ms/mcss",
   "version": "1.0.0",
   "description": "a simple css library",
   "main": "gulpfile.mjs",
   "scripts": {
     "build": "gulp build",
     "watch": "gulp",
-    "docs": "cd docs && npx http-server --port=1414"
+    "docs": "cd docs && npx http-server --port=1414",
+    "publish": "npm publish --access public"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/masoomulhaqs/ms-css.git"
+    "url": "git://github.com/masoomulhaqs/ms-css.git"
   },
   "keywords": [],
   "author": "Masoom Ul Haq S <masoomulhaqs@gmail.com>",
