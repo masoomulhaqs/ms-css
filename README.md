@@ -7,7 +7,6 @@ Table Of Contents:
 - [Installation](#installation)
 - [License](#license)
 
-
 ## Installation
 
 Install with npm:
