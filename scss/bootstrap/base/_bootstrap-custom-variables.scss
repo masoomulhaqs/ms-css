@@ -1319,14 +1319,14 @@ $navbar-dark-brand-hover-color: $navbar-dark-active-color !default;
 // scss-docs-start dropdown-variables
 $dropdown-min-width: 15rem !default;
 $dropdown-padding-x: 0 !default;
-$dropdown-padding-y: 0.5rem !default;
-$dropdown-spacer: 0.125rem !default;
+$dropdown-padding-y: 1rem !default;
+$dropdown-spacer: 0.25rem !default;
 $dropdown-font-size: $font-size-base !default;
 $dropdown-color: var(--#{$prefix}body-color) !default;
 $dropdown-bg: var(--#{$prefix}body-bg) !default;
 $dropdown-border-color: var(--#{$prefix}border-color-translucent) !default;
 $dropdown-border-radius: var(--#{$prefix}border-radius) !default;
-$dropdown-border-width: var(--#{$prefix}border-width) !default;
+$dropdown-border-width: 0 !default;
 $dropdown-inner-border-radius: calc(
   #{$dropdown-border-radius} - #{$dropdown-border-width}
 ) !default; // stylelint-disable-line function-disallowed-list
@@ -1343,8 +1343,8 @@ $dropdown-link-active-bg: $component-active-bg !default;
 
 $dropdown-link-disabled-color: var(--#{$prefix}tertiary-color) !default;
 
-$dropdown-item-padding-y: $spacer * 0.25 !default;
-$dropdown-item-padding-x: $spacer !default;
+$dropdown-item-padding-y: .5rem !default;
+$dropdown-item-padding-x: 1rem !default;
 
 $dropdown-header-color: $gray-600 !default;
 $dropdown-header-padding-x: $dropdown-item-padding-x !default;
