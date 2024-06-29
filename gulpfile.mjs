@@ -130,6 +130,7 @@ export const firstRelease = series(
 );
 
 export const release = series(
+    build,
     bumpVersion,
     changelog,
     commitTagPush,
