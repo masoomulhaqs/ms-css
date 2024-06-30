@@ -1,6 +1,6 @@
 {
   "name": "ms-css",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "a simple css library",
   "main": "gulpfile.mjs",
   "scripts": {
@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/masoomulhaqs/ms-css#readme",
   "dependencies": {
-    "@ng-select/ng-select": "^13.2.0",
+    "@ng-select/ng-select": "^12.0.7",
     "bootstrap": "^5.3.3",
     "line-awesome": "^1.3.0"
   },
