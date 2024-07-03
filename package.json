@@ -7,7 +7,7 @@
     "build": "gulp build",
     "watch": "gulp",
     "docs": "cd docs && npx http-server --port=1414",
-    "publish": "npm publish --access public"
+    "deploy": "npm publish --access public"
   },
   "repository": {
     "type": "git",
