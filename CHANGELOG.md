@@ -1,3 +1,7 @@
+## [1.0.6](https://github.com/masoomulhaqs/ms-css/compare/v1.0.5...v1.0.6) (2024-07-03)
+
+
+
 ## [1.0.5](https://github.com/masoomulhaqs/ms-css/compare/v1.0.4...v1.0.5) (2024-06-30)
 
 

@@ -47,10 +47,10 @@ $card-border-radius: 0 !default;
 $overlay-bg-default: rgba(#000, 0.25) !default;
 
 // Spinners
-$spinner-radius: 50px;
-$spinner-border-width: 5px;
-$spinner-color: $primary;
-$spinner-alt-color: rgba($spinner-color, 0.15);
+$spinner-radius: 50px !default;
+$spinner-border-width: 5px !default;
+$spinner-color: $primary !default;
+$spinner-alt-color: rgba($spinner-color, 0.15) !default;
 
 // Icons
 $icon-font-size: 20px !default;
@@ -60,4 +60,4 @@ $custom-form-input-controls: ms-input, ms-textarea !default;
 $custom-form-select-controls: ms-select !default;
 
 // Tables
-$table-font-size: 14px;
+$table-font-size: 14px !default;

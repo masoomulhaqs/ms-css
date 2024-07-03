@@ -12143,7 +12143,7 @@ textarea.form-control-lg {
   --ms-product-card-price-discounted-font-weight: 700;
   --ms-card-testimonial-min-height: 230px;
   --ms-spinner-radius: 50px;
-  --ms-spinner-border-width: 5px;
+  --ms-spinner-border-width: 0.25em;
   --ms-spinner-color: #6610f2;
   --ms-spinner-alt-color: rgba(102, 16, 242, 0.15);
 }
