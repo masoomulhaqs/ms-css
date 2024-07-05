@@ -12120,6 +12120,7 @@ textarea.form-control-lg {
   --ms-table-filters-color: var(--ms-gray);
   --ms-table-footer-font-size: 12px;
   --ms-table-footer-gap: 1rem;
+  --ms-input-block-editor-max-width: 650px;
   --ms-overlay-bg-default: rgba(0, 0, 0, 0.25);
   --ms-hero-banner-height: 480px;
   --ms-hero-banner-bg: #f8f9fa;
@@ -21715,6 +21716,27 @@ table td.td-column-actions {
   .container.container--contact-page > .row, .ms-auth-layout__container--two-column .container.container--contact-page > .ms-auth-layout__row {
     --ms-gutter-x: 1.5rem;
   }
+}
+
+.ms-input-block-editor .form-label {
+  margin-bottom: 0;
+}
+.ms-input-block-editor .form-label-wrapper {
+  display: block;
+  max-width: var(--ms-input-block-editor-max-width);
+  margin-inline: auto;
+  margin-bottom: 0.5rem;
+}
+.ms-input-block-editor .form-label-wrapper button {
+  text-decoration: none;
+}
+.ms-input-block-editor .invalid-feedback {
+  max-width: var(--ms-input-block-editor-max-width);
+  margin-inline: auto;
+}
+.ms-input-block-editor .ce-block__content,
+.ms-input-block-editor .ce-toolbar__content {
+  max-width: var(--ms-input-block-editor-max-width) !important;
 }
 
 /* --------------------------------- Layouts -------------------------------- */
