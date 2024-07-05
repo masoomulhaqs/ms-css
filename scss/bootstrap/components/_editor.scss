@@ -1,0 +1,26 @@
+.ms-input-block-editor {
+    .form-label {
+        margin-bottom: 0;
+
+        &-wrapper {
+            display: block;
+            max-width: var(--ms-input-block-editor-max-width);
+            margin-inline: auto;
+            margin-bottom: .5rem;
+
+            button {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .invalid-feedback {
+        max-width: var(--ms-input-block-editor-max-width);
+        margin-inline: auto;
+    }
+
+    .ce-block__content,
+    .ce-toolbar__content {
+        max-width: var(--ms-input-block-editor-max-width) !important;
+    }
+}
