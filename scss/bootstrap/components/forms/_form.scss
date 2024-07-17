@@ -1,6 +1,6 @@
-.form {
-  @include form-errors-inline-version2($custom-form-input-controls);
+@include form-errors-inline-version2($custom-form-input-controls);
 
+.form {
   &-title {
     font-weight: 500;
     margin-bottom: 1.5rem;

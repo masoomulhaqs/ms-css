@@ -32,4 +32,9 @@
     --ms-spinner-radius: 20px;
     --ms-spinner-border-width: 3px;
   }
+
+  &--xs {
+    --ms-spinner-radius: 12px;
+    --ms-spinner-border-width: 2px;
+  }
 }

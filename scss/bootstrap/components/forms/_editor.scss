@@ -1,10 +1,12 @@
 .ms-input-block-editor {
+    .codex-editor {
+        background-color: #fff;
+    }
     .form-label {
         margin-bottom: 0;
 
         &-wrapper {
             display: block;
-            max-width: var(--ms-input-block-editor-max-width);
             margin-inline: auto;
             margin-bottom: .5rem;
 
@@ -17,10 +19,17 @@
     .invalid-feedback {
         max-width: var(--ms-input-block-editor-max-width);
         margin-inline: auto;
+        @include media-breakpoint-up('md') {
+            margin-left: 60px;
+        }
     }
 
     .ce-block__content,
     .ce-toolbar__content {
         max-width: var(--ms-input-block-editor-max-width) !important;
+
+        @include media-breakpoint-up('md') {
+            margin-left: 60px;
+        }
     }
 }

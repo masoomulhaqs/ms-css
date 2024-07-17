@@ -1,0 +1,28 @@
+.ng-select {
+  .ng-select-container .ng-value-container .ng-input>input {
+    height: 100%;
+  }
+
+  &.ng-select-single,
+  &.ng-select-multiple {
+    &.ng-select-single {
+      .ng-select-container {
+        .ng-value-container .ng-input {
+          bottom: 5px;
+        }
+      }
+    }
+  }
+
+  &--sm {
+    font-size: 12px;
+
+    .ng-select-container {
+      min-height: $ng-select-height-sm;
+    }
+
+    &.ng-select-single .ng-select-container {
+      height: $ng-select-height-sm;
+    }
+  }
+}
