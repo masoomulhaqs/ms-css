@@ -12220,7 +12220,7 @@ input[type=number] {
   background-color: #f9f9f9;
   border-radius: 0.375rem;
   border: 1px solid #dee2e6;
-  min-height: 38px;
+  min-height: 50px;
   align-items: center;
 }
 .ng-select .ng-select-container:hover {
@@ -12239,7 +12239,7 @@ input[type=number] {
   color: #878787;
 }
 .ng-select.ng-select-single .ng-select-container {
-  height: 38px;
+  height: 50px;
 }
 .ng-select.ng-select-single .ng-select-container .ng-value-container .ng-input {
   top: 5px;
@@ -21146,6 +21146,10 @@ readers do not read off random characters that represent icons */
   --ms-spinner-radius: 20px;
   --ms-spinner-border-width: 3px;
 }
+.ms-spinner--xs {
+  --ms-spinner-radius: 12px;
+  --ms-spinner-border-width: 2px;
+}
 
 .las,
 .lar {
@@ -21261,6 +21265,12 @@ button.badge {
   width: 100%;
 }
 
+.ng-select .ng-select-container .ng-value-container .ng-input > input {
+  height: 100%;
+}
+.ng-select.ng-select-single.ng-select-single .ng-select-container .ng-value-container .ng-input, .ng-select.ng-select-multiple.ng-select-single .ng-select-container .ng-value-container .ng-input {
+  bottom: 5px;
+}
 .ng-select--sm {
   font-size: 12px;
 }
@@ -21271,28 +21281,41 @@ button.badge {
   height: 28px;
 }
 
-.form ms-input.ng-touched.ng-invalid .form-control,
-.form ms-input.ng-dirty.ng-invalid .form-control {
+.ms-save-input-badge .badge {
+  display: inline-flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+.ms-save-input-badge .badge > i {
+  font-size: 14px;
+}
+
+ms-input.ng-touched.ng-invalid .form-control,
+ms-input.ng-dirty.ng-invalid .form-control {
   border-color: var(--ms-danger);
 }
-.form ms-input.ng-touched.ng-invalid .invalid-feedback,
-.form ms-input.ng-dirty.ng-invalid .invalid-feedback {
+ms-input.ng-touched.ng-invalid .invalid-feedback,
+ms-input.ng-dirty.ng-invalid .invalid-feedback {
   display: block;
 }
-.form ms-input.ng-invalid.ng-touched .form-label, .form ms-input.ng-invalid.ng-dirty .form-label {
+
+ms-input.ng-invalid.ng-touched .form-label, ms-input.ng-invalid.ng-dirty .form-label {
   color: var(--ms-danger);
 }
-.form ms-textarea.ng-touched.ng-invalid .form-control,
-.form ms-textarea.ng-dirty.ng-invalid .form-control {
+
+ms-textarea.ng-touched.ng-invalid .form-control,
+ms-textarea.ng-dirty.ng-invalid .form-control {
   border-color: var(--ms-danger);
 }
-.form ms-textarea.ng-touched.ng-invalid .invalid-feedback,
-.form ms-textarea.ng-dirty.ng-invalid .invalid-feedback {
+ms-textarea.ng-touched.ng-invalid .invalid-feedback,
+ms-textarea.ng-dirty.ng-invalid .invalid-feedback {
   display: block;
 }
-.form ms-textarea.ng-invalid.ng-touched .form-label, .form ms-textarea.ng-invalid.ng-dirty .form-label {
+
+ms-textarea.ng-invalid.ng-touched .form-label, ms-textarea.ng-invalid.ng-dirty .form-label {
   color: var(--ms-danger);
 }
+
 .form-title {
   font-weight: 500;
   margin-bottom: 1.5rem;
@@ -21368,6 +21391,40 @@ button.badge {
   max-width: 330px;
   padding: 15px;
   margin: 3rem auto;
+}
+
+.ms-input-block-editor .codex-editor {
+  background-color: #fff;
+}
+.ms-input-block-editor .form-label {
+  margin-bottom: 0;
+}
+.ms-input-block-editor .form-label-wrapper {
+  display: block;
+  margin-inline: auto;
+  margin-bottom: 0.5rem;
+}
+.ms-input-block-editor .form-label-wrapper button {
+  text-decoration: none;
+}
+.ms-input-block-editor .invalid-feedback {
+  max-width: var(--ms-input-block-editor-max-width);
+  margin-inline: auto;
+}
+@media (min-width: 768px) {
+  .ms-input-block-editor .invalid-feedback {
+    margin-left: 60px;
+  }
+}
+.ms-input-block-editor .ce-block__content,
+.ms-input-block-editor .ce-toolbar__content {
+  max-width: var(--ms-input-block-editor-max-width) !important;
+}
+@media (min-width: 768px) {
+  .ms-input-block-editor .ce-block__content,
+  .ms-input-block-editor .ce-toolbar__content {
+    margin-left: 60px;
+  }
 }
 
 .ms-section__container {
@@ -21716,27 +21773,6 @@ table td.td-column-actions {
   .container.container--contact-page > .row, .ms-auth-layout__container--two-column .container.container--contact-page > .ms-auth-layout__row {
     --ms-gutter-x: 1.5rem;
   }
-}
-
-.ms-input-block-editor .form-label {
-  margin-bottom: 0;
-}
-.ms-input-block-editor .form-label-wrapper {
-  display: block;
-  max-width: var(--ms-input-block-editor-max-width);
-  margin-inline: auto;
-  margin-bottom: 0.5rem;
-}
-.ms-input-block-editor .form-label-wrapper button {
-  text-decoration: none;
-}
-.ms-input-block-editor .invalid-feedback {
-  max-width: var(--ms-input-block-editor-max-width);
-  margin-inline: auto;
-}
-.ms-input-block-editor .ce-block__content,
-.ms-input-block-editor .ce-toolbar__content {
-  max-width: var(--ms-input-block-editor-max-width) !important;
 }
 
 /* --------------------------------- Layouts -------------------------------- */
