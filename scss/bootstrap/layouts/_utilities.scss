@@ -27,6 +27,10 @@
   }
 }
 
+.text-transform-none {
+  text-transform: none !important;
+}
+
 .sticky-item {
   &__image {
     display: block;
