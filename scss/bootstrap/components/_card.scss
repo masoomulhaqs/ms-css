@@ -7,3 +7,10 @@
     }
   }
 }
+
+
+fdx-message-box {
+  .card {
+    --ms-card-border-color: var(--ms-border-color);
+  }
+}
