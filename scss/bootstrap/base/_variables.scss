@@ -56,8 +56,8 @@ $spinner-alt-color: rgba($spinner-color, 0.15) !default;
 $icon-font-size: 20px !default;
 
 // Forms
-$custom-form-input-controls: ms-input, ms-textarea !default;
-$custom-form-select-controls: ms-select !default;
+$custom-form-input-controls: ms-input, ms-textarea, fdx-input, fdx-textarea, fdx-input-block-editor !default;
+$custom-form-select-controls: ms-select, fdx-select !default;
 
 // Tables
 $table-font-size: 14px !default;

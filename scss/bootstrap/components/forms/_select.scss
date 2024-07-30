@@ -26,3 +26,23 @@
     }
   }
 }
+
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option {
+  padding: rem(10) rem(16);
+}
+
+.fdx-select--with-prefix-icon {
+  .ng-select .ng-select-container .ng-value-container .ng-placeholder,
+  .ng-select.ng-select-single .ng-select-container .ng-value-container .ng-value,
+  .ng-select .ng-select-container .ng-value-container .ng-input > input {
+    padding-left: rem(32);
+  }
+
+  button.btn-select-icon {
+    z-index: 1100;
+    left: rem(14);
+    height: 100%;
+    pointer-events: none;
+    padding-inline: 0;
+  }
+}

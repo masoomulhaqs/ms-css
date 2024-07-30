@@ -2,6 +2,7 @@
     .codex-editor {
         background-color: #fff;
     }
+
     .form-label {
         margin-bottom: 0;
 
@@ -19,6 +20,7 @@
     .invalid-feedback {
         max-width: var(--ms-input-block-editor-max-width);
         margin-inline: auto;
+
         @include media-breakpoint-up('md') {
             margin-left: 60px;
         }
@@ -30,6 +32,25 @@
 
         @include media-breakpoint-up('md') {
             margin-left: 60px;
+        }
+    }
+
+
+    .codex-editor.codex-editor--narrow {
+
+        .ce-block__content,
+        .ce-toolbar__content {
+            @include media-breakpoint-up('md') {
+                margin-left: 0;
+            }
+        }
+    }
+
+    &:has(.codex-editor--narrow) {
+        .invalid-feedback {
+            @include media-breakpoint-up('md') {
+                margin-left: 0;
+            }
         }
     }
 }

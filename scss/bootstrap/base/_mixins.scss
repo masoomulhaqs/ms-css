@@ -21,9 +21,12 @@
 
 @mixin form-errors-inline-version2($selectors) {
   @each $sel in $selectors {
+
     #{$sel}.ng-touched.ng-invalid,
     #{$sel}.ng-dirty.ng-invalid {
-      .form-control {
+
+      .form-control,
+      .ng-select .ng-select-container {
         border-color: var(--ms-danger);
       }
 
@@ -33,6 +36,7 @@
     }
 
     #{$sel}.ng-invalid {
+
       &.ng-touched,
       &.ng-dirty {
         .form-label {
@@ -45,16 +49,18 @@
 
 @mixin form-errors-inline($selectors) {
   @each $sel in $selectors {
+
     #{$sel}.ng-touched.ng-invalid &,
     #{$sel}.ng-dirty.ng-invalid & {
       border-color: var(--ms-danger);
 
-      & ~ .invalid-feedback {
+      &~.invalid-feedback {
         display: block;
       }
     }
 
     #{$sel}.ng-invalid {
+
       &.ng-touched,
       &.ng-dirty {
         .form-label {
