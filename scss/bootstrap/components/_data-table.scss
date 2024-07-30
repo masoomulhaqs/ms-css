@@ -1,15 +1,6 @@
 table {
   font-size: var(--ms-table-font-size);
 
-  > :not(caption) > * > * {
-    &:first-child {
-      padding-left: 2rem;
-    }
-    &:last-child {
-      padding-right: 2rem;
-    }
-  }
-
   th {
     // TODO: This can be moved to feature file
     &.th--revisions {
@@ -82,6 +73,15 @@ table {
     --ms-table-striped-bg: rgba(0, 0, 0, 0.03);
     --ms-table-hover-bg: rgba(0, 0, 0, 0.03);
     margin-bottom: 0;
+
+    > :not(caption) > * > * {
+      &:first-child {
+        padding-left: 2rem;
+      }
+      &:last-child {
+        padding-right: 2rem;
+      }
+    }
 
     &-responsive {
       margin-left: -2rem;
