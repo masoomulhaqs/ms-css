@@ -23,10 +23,6 @@
   --ms-sidebar-layout-aside-width: 0;
   --ms-sidebar-layout-aside-spacing-x: 0.5rem;
 
-  .nav-pills {
-    --ms-nav-link-padding-x: 0.5rem;
-  }
-
   .sidebar-layout {
     &__aside {
       width: auto;
@@ -221,11 +217,6 @@
     .nav-link {
       display: flex;
       align-items: center;
-
-      @include media-breakpoint-below-desktop() {
-        gap: 0.5rem;
-        justify-content: flex-start;
-      }
     }
   }
 }
