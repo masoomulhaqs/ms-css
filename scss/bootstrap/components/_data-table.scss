@@ -173,14 +173,14 @@ table {
       --ms-btn-active-color: var(--ms-btn-color);
       --ms-btn-active-bg: var(--ms-btn-bg);
       --ms-btn-active-border-color: var(--ms-btn-border-color);
-      
+
       @include media-breakpoint-down("md") {
-        padding:.125rem .25rem;
+        padding: 0.125rem 0.25rem;
       }
 
       > i {
         font-size: var(--ms-table-icon-font-size);
-      
+
         @include media-breakpoint-down("md") {
           font-size: 20px;
         }

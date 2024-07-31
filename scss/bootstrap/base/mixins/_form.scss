@@ -1,30 +1,7 @@
-@mixin default-card-overlay() {
-  position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    inset: 0 0 0 0;
-    background-color: var(--ms-overlay-bg-default);
-    z-index: 1;
-    pointer-events: none;
-  }
-}
-
-@mixin auth-layout-theme($theme: "two-column") {
-  $theme-class: ".ms-auth-layout__container--" + $theme;
-
-  #{$theme-class} & {
-    @content;
-  }
-}
-
 @mixin form-errors-inline-version2($selectors) {
   @each $sel in $selectors {
-
     #{$sel}.ng-touched.ng-invalid,
     #{$sel}.ng-dirty.ng-invalid {
-
       .form-control,
       .ng-select .ng-select-container {
         border-color: var(--ms-danger);
@@ -36,7 +13,6 @@
     }
 
     #{$sel}.ng-invalid {
-
       &.ng-touched,
       &.ng-dirty {
         .form-label {
@@ -49,18 +25,16 @@
 
 @mixin form-errors-inline($selectors) {
   @each $sel in $selectors {
-
     #{$sel}.ng-touched.ng-invalid &,
     #{$sel}.ng-dirty.ng-invalid & {
       border-color: var(--ms-danger);
 
-      &~.invalid-feedback {
+      & ~ .invalid-feedback {
         display: block;
       }
     }
 
     #{$sel}.ng-invalid {
-
       &.ng-touched,
       &.ng-dirty {
         .form-label {
@@ -68,15 +42,5 @@
         }
       }
     }
-  }
-}
-
-@mixin section-spacing-y() {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-
-  @include media-breakpoint-down("md") {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
   }
 }

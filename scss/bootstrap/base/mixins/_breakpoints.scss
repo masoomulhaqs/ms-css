@@ -1,0 +1,11 @@
+@mixin media-breakpoint-desktop-and-above() {
+  @include media-breakpoint-up("lg") {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-below-desktop() {
+  @include media-breakpoint-down("md") {
+    @content;
+  }
+}

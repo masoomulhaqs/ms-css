@@ -55,7 +55,7 @@
         }
 
         img {
-          @include media-breakpoint-down('lg') {
+          @include media-breakpoint-down("lg") {
             width: 60px;
           }
         }

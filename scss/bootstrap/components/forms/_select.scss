@@ -1,5 +1,5 @@
 .ng-select {
-  .ng-select-container .ng-value-container .ng-input>input {
+  .ng-select-container .ng-value-container .ng-input > input {
     height: 100%;
   }
 
@@ -32,8 +32,13 @@
 }
 
 .fdx-select--with-prefix-icon {
+  isolation: isolate;
+
   .ng-select .ng-select-container .ng-value-container .ng-placeholder,
-  .ng-select.ng-select-single .ng-select-container .ng-value-container .ng-value,
+  .ng-select.ng-select-single
+    .ng-select-container
+    .ng-value-container
+    .ng-value,
   .ng-select .ng-select-container .ng-value-container .ng-input > input {
     padding-left: rem(32);
   }

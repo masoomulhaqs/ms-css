@@ -1,0 +1,12 @@
+@mixin default-card-overlay() {
+    position: relative;
+  
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0 0 0 0;
+      background-color: var(--ms-overlay-bg-default);
+      z-index: 1;
+      pointer-events: none;
+    }
+  }

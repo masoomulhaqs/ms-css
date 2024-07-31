@@ -1,0 +1,7 @@
+@mixin auth-layout-theme($theme: "two-column") {
+  $theme-class: ".ms-auth-layout__container--" + $theme;
+
+  #{$theme-class} & {
+    @content;
+  }
+}

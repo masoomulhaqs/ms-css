@@ -1,18 +1,7 @@
 // Fonts
-$font-family-default:
-  system-ui,
-  -apple-system,
-  "Segoe UI",
-  Roboto,
-  "Helvetica Neue",
-  "Noto Sans",
-  "Liberation Sans",
-  Arial,
-  sans-serif,
-  "Apple Color Emoji",
-  "Segoe UI Emoji",
-  "Segoe UI Symbol",
-  "Noto Color Emoji" !default;
+$font-family-default: system-ui, -apple-system, "Segoe UI", Roboto,
+  "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 
 $font-family-base: $font-family-default !default;
 $font-family-heading: $font-family-default !default;
@@ -56,7 +45,8 @@ $spinner-alt-color: rgba($spinner-color, 0.15) !default;
 $icon-font-size: 20px !default;
 
 // Forms
-$custom-form-input-controls: ms-input, ms-textarea, fdx-input, fdx-textarea, fdx-input-block-editor !default;
+$custom-form-input-controls: ms-input, ms-textarea, fdx-input, fdx-textarea,
+  fdx-input-block-editor !default;
 $custom-form-select-controls: ms-select, fdx-select !default;
 
 // Tables

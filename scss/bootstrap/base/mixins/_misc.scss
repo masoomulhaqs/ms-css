@@ -1,0 +1,9 @@
+@mixin section-spacing-y() {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  @include media-breakpoint-down("md") {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
