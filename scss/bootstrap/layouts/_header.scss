@@ -132,3 +132,10 @@
     }
   }
 }
+
+.site-header {
+  .btn-menu {
+    all: unset;
+    display: none;
+  }
+}

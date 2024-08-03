@@ -13,4 +13,10 @@
       }
     }
   }
+
+  &.fdx-confirmation-alert-dialog {
+    .modal-body {
+      padding-bottom: 0;
+    }
+  }
 }

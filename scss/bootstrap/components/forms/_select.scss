@@ -51,3 +51,9 @@
     padding-inline: 0;
   }
 }
+
+body.modal-open {
+  .ng-dropdown-panel {
+    z-index: $zindex-modal-dropdown;
+  }
+}
