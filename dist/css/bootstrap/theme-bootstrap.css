@@ -21305,6 +21305,10 @@ fdx-message-box .card {
   padding-inline: 0;
 }
 
+body.modal-open .ng-dropdown-panel {
+  z-index: 1100;
+}
+
 .ms-save-input-badge .badge {
   display: inline-flex;
   gap: 0.25rem;
@@ -21756,6 +21760,9 @@ table td.td-column-actions {
 .modal-body--busy * {
   pointer-events: none;
 }
+.modal.fdx-confirmation-alert-dialog .modal-body {
+  padding-bottom: 0;
+}
 
 .ms-hero-banner__wrapper {
   background: var(--ms-hero-banner-bg) no-repeat 90% center;
@@ -21985,6 +21992,11 @@ table td.td-column-actions {
   visibility: visible;
   opacity: 1;
   pointer-events: all;
+}
+
+.site-header .btn-menu {
+  all: unset;
+  display: none;
 }
 
 .ms-main-footer {
