@@ -42,7 +42,7 @@
     gap: 1rem;
     margin-top: $spacer;
 
-    @include media-breakpoint-up("md") {
+    @include media-breakpoint-desktop-and-above() {
       flex-direction: row;
       justify-content: flex-end;
     }

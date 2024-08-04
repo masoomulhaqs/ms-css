@@ -55,7 +55,7 @@
         }
 
         img {
-          @include media-breakpoint-down("lg") {
+          @include media-breakpoint-below-desktop {
             width: 60px;
           }
         }

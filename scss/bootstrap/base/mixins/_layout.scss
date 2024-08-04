@@ -5,3 +5,63 @@
     @content;
   }
 }
+
+@mixin sidebar-collapsed-styles() {
+  --ms-sidebar-layout-aside-width: 56px;
+  --ms-sidebar-layout-aside-spacing-x: 0.5rem;
+
+  .nav-pills {
+    --ms-nav-link-padding-x: 0.5rem;
+  }
+
+  .nav-link {
+    justify-content: center;
+
+    &__icon {
+      margin-right: 0 !important;
+    }
+
+    &__label {
+      display: none;
+    }
+  }
+}
+
+@mixin sidebar-mobile-styles() {
+  --ms-sidebar-layout-aside-width: 0;
+  --ms-sidebar-layout-aside-spacing-x: 0.5rem;
+
+  .sidebar-layout {
+    &__aside {
+      width: auto;
+      inset: var(--ms-site-header-height) 0 0;
+      z-index: 9999;
+    }
+  }
+
+  .btn-menu {
+    display: block;
+  }
+
+  &--collapsed {
+    .sidebar-layout {
+      &__aside {
+        display: none;
+      }
+    }
+  }
+
+  &--expanded {
+    .btn-account-menu {
+      opacity: 0;
+    }
+
+    .btn-menu {
+      display: none;
+    }
+
+    .btn-menu-back {
+      display: block;
+    }
+  }
+}

@@ -5,7 +5,7 @@
 }
 
 @mixin media-breakpoint-below-desktop() {
-  @include media-breakpoint-down("md") {
+  @include media-breakpoint-down("lg") {
     @content;
   }
 }

@@ -21,7 +21,7 @@
     max-width: var(--ms-input-block-editor-max-width);
     margin-inline: auto;
 
-    @include media-breakpoint-up("md") {
+    @include media-breakpoint-desktop-and-above() {
       margin-left: 60px;
     }
   }
@@ -30,7 +30,7 @@
   .ce-toolbar__content {
     max-width: var(--ms-input-block-editor-max-width) !important;
 
-    @include media-breakpoint-up("md") {
+    @include media-breakpoint-desktop-and-above() {
       margin-left: 60px;
     }
   }
@@ -38,7 +38,7 @@
   .codex-editor.codex-editor--narrow {
     .ce-block__content,
     .ce-toolbar__content {
-      @include media-breakpoint-up("md") {
+      @include media-breakpoint-desktop-and-above() {
         margin-left: 0;
       }
     }
@@ -46,7 +46,7 @@
 
   &:has(.codex-editor--narrow) {
     .invalid-feedback {
-      @include media-breakpoint-up("md") {
+      @include media-breakpoint-desktop-and-above() {
         margin-left: 0;
       }
     }

@@ -7,14 +7,14 @@
   &#{&}--contact-page {
     --ms-gutter-x: 4rem;
 
-    @include media-breakpoint-down("lg") {
+    @include media-breakpoint-below-desktop() {
       --ms-gutter-x: 1.5rem;
     }
 
     > .row {
       --ms-gutter-x: 4rem;
 
-      @include media-breakpoint-down("lg") {
+      @include media-breakpoint-below-desktop() {
         --ms-gutter-x: 1.5rem;
       }
     }

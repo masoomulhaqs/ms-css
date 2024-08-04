@@ -1,0 +1,48 @@
+.site-header {
+  @include media-breakpoint-below-desktop() {
+    padding-inline: 0 !important;
+  }
+
+  .container-fluid {
+    @include media-breakpoint-below-desktop() {
+      --ms-gutter-x: 2rem;
+    }
+  }
+
+  .btn-menu {
+    all: unset;
+    display: none;
+  }
+
+  .btn-menu-back {
+    padding: 0;
+    display: none;
+  }
+
+  .btn-account-menu {
+    @include media-breakpoint-below-desktop() {
+      &:after {
+        display: none;
+      }
+
+      span {
+        display: none;
+      }
+    }
+  }
+
+  .dropdown-menu {
+    @include media-breakpoint-desktop-and-above() {
+      margin-top: 1rem !important;
+    }
+
+    @include media-breakpoint-below-desktop() {
+      --ms-box-shadow-lg: 0px 0.3rem 0.5rem rgba(0, 0, 0, 0.175);
+
+      position: fixed !important;
+      inset: var(--ms-site-header-height, 56px) 0 auto 0 !important;
+      transform: none !important;
+      border-radius: 0 !important;
+    }
+  }
+}
