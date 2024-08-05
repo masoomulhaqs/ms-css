@@ -44,6 +44,11 @@
     }
   }
 
+  .cdx-checklist__item--checked .cdx-checklist__item-checkbox-check {
+    background: var(--ms-primary);
+    border-color: var(--ms-primary);
+  }
+
   &:has(.codex-editor--narrow) {
     .invalid-feedback {
       @include media-breakpoint-desktop-and-above() {
