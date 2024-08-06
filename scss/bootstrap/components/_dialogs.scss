@@ -20,3 +20,8 @@
     }
   }
 }
+
+// Apply the mixin to the .modal-dialog-scrollable class
+.modal-dialog-scrollable {
+  @include dialog-scrollable-with-form($dialog-scrollable-selectors);
+}

@@ -54,14 +54,21 @@
   &--expanded {
     .btn-account-menu {
       opacity: 0;
+      pointer-events: none;
     }
 
     .btn-menu {
       display: none;
+      pointer-events: none;
     }
 
     .btn-menu-back {
       display: block;
+    }
+
+    .hidden-on-expand--mobile {
+      opacity: 0 !important;
+      pointer-events: none;
     }
   }
 }

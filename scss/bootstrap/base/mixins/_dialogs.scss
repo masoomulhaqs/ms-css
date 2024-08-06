@@ -1,0 +1,11 @@
+@mixin dialog-scrollable-with-form($selectors) {
+  @each $selector in $selectors {
+    #{$selector} {
+      form {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+    }
+  }
+}
