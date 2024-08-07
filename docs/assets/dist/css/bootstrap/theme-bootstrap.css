@@ -21289,20 +21289,92 @@ fdx-message-box .card {
   padding: 0.625rem 1rem;
 }
 
-.fdx-select--with-prefix-icon {
+.fdx-select--has-prefix-icon {
   isolation: isolate;
 }
-.fdx-select--with-prefix-icon .ng-select .ng-select-container .ng-value-container .ng-placeholder,
-.fdx-select--with-prefix-icon .ng-select.ng-select-single .ng-select-container .ng-value-container .ng-value,
-.fdx-select--with-prefix-icon .ng-select .ng-select-container .ng-value-container .ng-input > input {
+.fdx-select--has-prefix-icon .ng-select .ng-select-container .ng-value-container .ng-placeholder,
+.fdx-select--has-prefix-icon .ng-select.ng-select-single .ng-select-container .ng-value-container .ng-value,
+.fdx-select--has-prefix-icon .ng-select .ng-select-container .ng-value-container .ng-input > input {
   padding-left: 2rem;
 }
-.fdx-select--with-prefix-icon button.btn-select-icon {
+.fdx-select--has-prefix-icon button.btn-select-icon {
   z-index: 1100;
   left: 0.875rem;
   height: 100%;
   pointer-events: none;
   padding-inline: 0;
+}
+.fdx-select--cloak .ng-select {
+  min-width: 130px;
+}
+.fdx-select--cloak .ng-select .ng-select-container {
+  min-height: 30px;
+}
+.fdx-select--cloak .ng-select.ng-select-single .ng-select-container {
+  height: 30px;
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+.fdx-select--cloak .ng-select .ng-clear-wrapper {
+  text-align: right;
+}
+.fdx-select--cloak.fdx-select--has-prefix-icon button.btn-select-icon {
+  padding-top: 0;
+  padding-bottom: 0;
+  height: auto;
+  line-height: 0;
+  top: 50% !important;
+  transform: translateY(-50%);
+  left: 0;
+}
+.fdx-select--cloak.fdx-select--has-prefix-icon .ng-select .ng-select-container .ng-value-container .ng-placeholder,
+.fdx-select--cloak.fdx-select--has-prefix-icon .ng-select.ng-select-single .ng-select-container .ng-value-container .ng-value,
+.fdx-select--cloak.fdx-select--has-prefix-icon .ng-select .ng-select-container .ng-value-container .ng-input > input {
+  padding-left: 1.25rem;
+}
+.fdx-select--chip .ng-select {
+  min-width: 130px;
+}
+.fdx-select--chip .ng-select .ng-select-container {
+  min-height: 30px;
+}
+.fdx-select--chip .ng-select.ng-select-single .ng-select-container {
+  height: 30px;
+  background: var(--ms-primary-bg-subtle);
+  border: 0;
+  padding: 0;
+}
+.fdx-select--chip .ng-select .ng-clear-wrapper {
+  text-align: right;
+}
+.fdx-select--chip.fdx-select--has-prefix-icon button.btn-select-icon {
+  padding-top: 0;
+  padding-bottom: 0;
+  height: auto;
+  line-height: 0;
+  top: 50% !important;
+  transform: translateY(-50%);
+  left: 0.5rem;
+}
+.fdx-select--chip.fdx-select--has-prefix-icon .ng-select .ng-select-container .ng-value-container .ng-placeholder,
+.fdx-select--chip.fdx-select--has-prefix-icon .ng-select.ng-select-single .ng-select-container .ng-value-container .ng-value,
+.fdx-select--chip.fdx-select--has-prefix-icon .ng-select .ng-select-container .ng-value-container .ng-input > input {
+  padding-left: 1.6rem;
+}
+.fdx-select--chip.fdx-select--has-prefix-icon .ng-select .ng-select-container .ng-value-container .ng-placeholder,
+.fdx-select--chip.fdx-select--has-prefix-icon .ng-select .ng-clear-wrapper,
+.fdx-select--chip.fdx-select--has-prefix-icon .ng-select .ng-arrow-wrapper .ng-arrow {
+  color: #333;
+}
+.fdx-select--chip.fdx-select--has-prefix-icon .ng-select .ng-arrow-wrapper .ng-arrow {
+  border-top-color: #333;
+}
+.fdx-select--chip.fdx-select--has-prefix-icon .ng-select.ng-select-opened > .ng-select-container .ng-arrow {
+  border-bottom-color: #000;
+}
+.fdx-select--chip.fdx-select--has-prefix-icon .ng-select .ng-arrow-wrapper:hover .ng-arrow {
+  border-top-color: #000;
 }
 
 body.modal-open .ng-dropdown-panel {
@@ -21316,6 +21388,24 @@ body.modal-open .ng-dropdown-panel {
 }
 .ms-save-input-badge .badge > i {
   font-size: 14px;
+}
+
+.fdx-input-date-picker--cloak input.form-control {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-size: 1.25rem;
+  font-weight: 700;
+  outline: none;
+  box-shadow: none;
+}
+.fdx-input-date-picker--cloak input.form-control ~ button {
+  padding-top: 0px !important;
+  padding-bottom: 0 !important;
+  height: auto !important;
+  line-height: 0;
+  top: 50% !important;
+  transform: translateY(-50%);
 }
 
 ms-input.ng-touched.ng-invalid .form-control,
