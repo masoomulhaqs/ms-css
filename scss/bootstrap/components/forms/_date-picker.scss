@@ -1,0 +1,22 @@
+.fdx-input-date-picker {
+  &--cloak {
+    input.form-control {
+      padding: 0;
+      border: 0;
+      background: transparent;
+      font-size: 1.25rem;
+      font-weight: 700;
+      outline: none;
+      box-shadow: none;
+
+      ~ button {
+        padding-top: 0px !important;
+        padding-bottom: 0 !important;
+        height: auto !important;
+        line-height: 0;
+        top: 50% !important;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}

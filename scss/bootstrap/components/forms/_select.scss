@@ -32,27 +32,127 @@
 }
 
 // TODO: Below code needs refactoring
-.fdx-select--with-prefix-icon {
-  isolation: isolate;
+.fdx-select {
+  &--has-prefix-icon {
+    isolation: isolate;
 
-  .ng-select .ng-select-container .ng-value-container .ng-placeholder,
-  .ng-select.ng-select-single
-    .ng-select-container
-    .ng-value-container
-    .ng-value,
-  .ng-select .ng-select-container .ng-value-container .ng-input > input {
-    padding-left: rem(32);
+    .ng-select .ng-select-container .ng-value-container .ng-placeholder,
+    .ng-select.ng-select-single
+      .ng-select-container
+      .ng-value-container
+      .ng-value,
+    .ng-select .ng-select-container .ng-value-container .ng-input > input {
+      padding-left: rem(32);
+    }
+
+    button.btn-select-icon {
+      z-index: 1100;
+      left: rem(14);
+      height: 100%;
+      pointer-events: none;
+      padding-inline: 0;
+    }
   }
 
-  button.btn-select-icon {
-    z-index: 1100;
-    left: rem(14);
-    height: 100%;
-    pointer-events: none;
-    padding-inline: 0;
+  &--cloak {
+    .ng-select {
+      min-width: 130px;
+    }
+
+    .ng-select .ng-select-container {
+      min-height: 30px;
+    }
+
+    .ng-select.ng-select-single .ng-select-container {
+      height: 30px;
+      background: transparent;
+      border: 0;
+      padding: 0;
+    }
+
+    .ng-select .ng-clear-wrapper {
+      text-align: right;
+    }
+
+    &.fdx-select--has-prefix-icon {
+      button.btn-select-icon {
+        padding-top: 0;
+        padding-bottom: 0;
+        height: auto;
+        line-height: 0;
+        top: 50% !important;
+        transform: translateY(-50%);
+        left: 0;
+      }
+
+      .ng-select .ng-select-container .ng-value-container .ng-placeholder,
+      .ng-select.ng-select-single
+        .ng-select-container
+        .ng-value-container
+        .ng-value,
+      .ng-select .ng-select-container .ng-value-container .ng-input > input {
+        padding-left: 1.25rem;
+      }
+    }
+  }
+
+  &--chip {
+    .ng-select {
+      min-width: 130px;
+    }
+
+    .ng-select .ng-select-container {
+      min-height: 30px;
+    }
+
+    .ng-select.ng-select-single .ng-select-container {
+      height: 30px;
+      background: var(--ms-primary-bg-subtle);
+      border: 0;
+      padding: 0;
+    }
+
+    .ng-select .ng-clear-wrapper {
+      text-align: right;
+    }
+
+    &.fdx-select--has-prefix-icon {
+      button.btn-select-icon {
+        padding-top: 0;
+        padding-bottom: 0;
+        height: auto;
+        line-height: 0;
+        top: 50% !important;
+        transform: translateY(-50%);
+        left: 0.5rem;
+      }
+
+      .ng-select .ng-select-container .ng-value-container .ng-placeholder,
+      .ng-select.ng-select-single
+        .ng-select-container
+        .ng-value-container
+        .ng-value,
+      .ng-select .ng-select-container .ng-value-container .ng-input > input {
+        padding-left: 1.6rem;
+      }
+
+      .ng-select .ng-select-container .ng-value-container .ng-placeholder,
+      .ng-select .ng-clear-wrapper,
+      .ng-select .ng-arrow-wrapper .ng-arrow {
+        color: #333;
+      }
+      .ng-select .ng-arrow-wrapper .ng-arrow {
+        border-top-color: #333;
+      }
+      .ng-select.ng-select-opened > .ng-select-container .ng-arrow {
+        border-bottom-color: #000;
+      }
+      .ng-select .ng-arrow-wrapper:hover .ng-arrow {
+        border-top-color: #000;
+      }
+    }
   }
 }
-
 body.modal-open {
   .ng-dropdown-panel {
     z-index: $zindex-modal-dropdown;
