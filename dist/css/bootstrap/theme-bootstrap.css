@@ -12075,6 +12075,16 @@ textarea.form-control-lg {
     transform: rotate(360deg);
   }
 }
+@keyframes line-loader {
+  0% {
+    left: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    left: 100%;
+    transform: translateX(0%);
+  }
+}
 :root {
   --ms-font-family-roboto: var(--ms-font-sans-serif);
   --ms-font-family-roboto-slab: system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Noto Sans, Liberation Sans, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
@@ -12147,6 +12157,11 @@ textarea.form-control-lg {
   --ms-spinner-border-width: 0.25em;
   --ms-spinner-color: #6610f2;
   --ms-spinner-alt-color: rgba(102, 16, 242, 0.15);
+  --ms-select-chip-fs: 0.9em;
+  --ms-select-chip-height: 30px;
+  --ms-select-chip-color: #333;
+  --ms-select-chip-border-color: #000;
+  --ms-select-chip-disabled-bg-color: #c3c3c3;
 }
 
 body {
@@ -21151,6 +21166,27 @@ readers do not read off random characters that represent icons */
   --ms-spinner-border-width: 2px;
 }
 
+.ms-line-loader {
+  --ms-line-loader-height: 4px;
+  width: 100%;
+  height: var(--ms-line-loader-height);
+  display: inline-block;
+  position: relative;
+  background: rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+.ms-line-loader::after {
+  content: "";
+  width: 180px;
+  height: var(--ms-line-loader-height);
+  background: rgba(102, 16, 242, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  animation: line-loader 2s linear infinite;
+}
+
 .las,
 .lar {
   font-size: var(--ms-icon-font-size, 20px);
@@ -21289,6 +21325,10 @@ fdx-message-box .card {
   padding: 0.625rem 1rem;
 }
 
+body.modal-open .ng-dropdown-panel {
+  z-index: 1100;
+}
+
 .fdx-select--has-prefix-icon {
   isolation: isolate;
 }
@@ -21337,16 +21377,37 @@ fdx-message-box .card {
   min-width: 130px;
 }
 .fdx-select--chip .ng-select .ng-select-container {
-  min-height: 30px;
-}
-.fdx-select--chip .ng-select.ng-select-single .ng-select-container {
-  height: 30px;
+  min-height: var(--ms-select-chip-height);
+  height: var(--ms-select-chip-height);
   background: var(--ms-primary-bg-subtle);
   border: 0;
   padding: 0;
 }
+.fdx-select--chip .ng-select .ng-select-container .ng-value-container .ng-placeholder {
+  font-size: var(--ms-select-chip-fs);
+}
 .fdx-select--chip .ng-select .ng-clear-wrapper {
   text-align: right;
+}
+.fdx-select--chip .ng-select .ng-select-container .ng-value-container .ng-placeholder,
+.fdx-select--chip .ng-select .ng-clear-wrapper,
+.fdx-select--chip .ng-select .ng-arrow-wrapper .ng-arrow {
+  color: var(--ms-select-chip-color);
+}
+.fdx-select--chip .ng-select .ng-arrow-wrapper .ng-arrow {
+  border-top-color: var(--ms-select-chip-color);
+}
+.fdx-select--chip .ng-select.ng-select-opened > .ng-select-container .ng-arrow {
+  border-bottom-color: var(--ms-select-chip-border-color);
+}
+.fdx-select--chip .ng-select .ng-arrow-wrapper:hover .ng-arrow {
+  border-top-color: var(--ms-select-chip-border-color);
+}
+.fdx-select--chip:has(ng-select.ng-select-disabled) {
+  opacity: 0.5;
+}
+.fdx-select--chip ng-select.ng-select-disabled.ng-select .ng-select-container {
+  background: var(--ms-select-chip-disabled-bg-color);
 }
 .fdx-select--chip.fdx-select--has-prefix-icon button.btn-select-icon {
   padding-top: 0;
@@ -21359,26 +21420,9 @@ fdx-message-box .card {
 }
 .fdx-select--chip.fdx-select--has-prefix-icon .ng-select .ng-select-container .ng-value-container .ng-placeholder,
 .fdx-select--chip.fdx-select--has-prefix-icon .ng-select.ng-select-single .ng-select-container .ng-value-container .ng-value,
+.fdx-select--chip.fdx-select--has-prefix-icon .ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value,
 .fdx-select--chip.fdx-select--has-prefix-icon .ng-select .ng-select-container .ng-value-container .ng-input > input {
   padding-left: 1.6rem;
-}
-.fdx-select--chip.fdx-select--has-prefix-icon .ng-select .ng-select-container .ng-value-container .ng-placeholder,
-.fdx-select--chip.fdx-select--has-prefix-icon .ng-select .ng-clear-wrapper,
-.fdx-select--chip.fdx-select--has-prefix-icon .ng-select .ng-arrow-wrapper .ng-arrow {
-  color: #333;
-}
-.fdx-select--chip.fdx-select--has-prefix-icon .ng-select .ng-arrow-wrapper .ng-arrow {
-  border-top-color: #333;
-}
-.fdx-select--chip.fdx-select--has-prefix-icon .ng-select.ng-select-opened > .ng-select-container .ng-arrow {
-  border-bottom-color: #000;
-}
-.fdx-select--chip.fdx-select--has-prefix-icon .ng-select .ng-arrow-wrapper:hover .ng-arrow {
-  border-top-color: #000;
-}
-
-body.modal-open .ng-dropdown-panel {
-  z-index: 1100;
 }
 
 .ms-save-input-badge .badge {
@@ -21558,6 +21602,14 @@ fdx-input-block-editor.ng-invalid.ng-touched .form-label, fdx-input-block-editor
   max-width: 330px;
   padding: 15px;
   margin: 3rem auto;
+}
+
+.form-check-input:disabled {
+  background-color: #c3c3c3;
+  border-color: #c3c3c3;
+}
+.form-check-input:disabled:checked[type=checkbox] {
+  --ms-form-check-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='%23333' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/></svg>");
 }
 
 .ms-input-block-editor .codex-editor {
