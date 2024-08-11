@@ -114,4 +114,11 @@
   --ms-spinner-border-width: #{$spinner-border-width};
   --ms-spinner-color: #{$spinner-color};
   --ms-spinner-alt-color: #{$spinner-alt-color};
+
+  // Forms
+  --ms-select-chip-fs: 0.9em;
+  --ms-select-chip-height: 30px;
+  --ms-select-chip-color: #333;
+  --ms-select-chip-border-color: #000;
+  --ms-select-chip-disabled-bg-color: #c3c3c3;
 }

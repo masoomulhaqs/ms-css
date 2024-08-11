@@ -31,7 +31,12 @@
   padding: rem(10) rem(16);
 }
 
-// TODO: Below code needs refactoring
+body.modal-open {
+  .ng-dropdown-panel {
+    z-index: $zindex-modal-dropdown;
+  }
+}
+
 .fdx-select {
   &--has-prefix-icon {
     isolation: isolate;
@@ -46,7 +51,7 @@
     }
 
     button.btn-select-icon {
-      z-index: 1100;
+      z-index: $zindex-select-dropdown;
       left: rem(14);
       height: 100%;
       pointer-events: none;
@@ -102,18 +107,47 @@
     }
 
     .ng-select .ng-select-container {
-      min-height: 30px;
-    }
-
-    .ng-select.ng-select-single .ng-select-container {
-      height: 30px;
+      min-height: var(--ms-select-chip-height);
+      height: var(--ms-select-chip-height);
       background: var(--ms-primary-bg-subtle);
       border: 0;
       padding: 0;
+
+      .ng-value-container .ng-placeholder {
+        font-size: var(--ms-select-chip-fs);
+      }
     }
 
     .ng-select .ng-clear-wrapper {
       text-align: right;
+    }
+
+    .ng-select .ng-select-container .ng-value-container .ng-placeholder,
+    .ng-select .ng-clear-wrapper,
+    .ng-select .ng-arrow-wrapper .ng-arrow {
+      color: var(--ms-select-chip-color);
+    }
+
+    .ng-select .ng-arrow-wrapper .ng-arrow {
+      border-top-color: var(--ms-select-chip-color);
+    }
+
+    .ng-select.ng-select-opened > .ng-select-container .ng-arrow {
+      border-bottom-color: var(--ms-select-chip-border-color);
+    }
+
+    .ng-select .ng-arrow-wrapper:hover .ng-arrow {
+      border-top-color: var(--ms-select-chip-border-color);
+    }
+
+    &:has(ng-select.ng-select-disabled) {
+      opacity: 0.5;
+    }
+
+    ng-select.ng-select-disabled {
+      &.ng-select .ng-select-container {
+        background: var(--ms-select-chip-disabled-bg-color);
+      }
     }
 
     &.fdx-select--has-prefix-icon {
@@ -132,29 +166,13 @@
         .ng-select-container
         .ng-value-container
         .ng-value,
+      .ng-select.ng-select-multiple
+        .ng-select-container
+        .ng-value-container
+        .ng-value,
       .ng-select .ng-select-container .ng-value-container .ng-input > input {
         padding-left: 1.6rem;
       }
-
-      .ng-select .ng-select-container .ng-value-container .ng-placeholder,
-      .ng-select .ng-clear-wrapper,
-      .ng-select .ng-arrow-wrapper .ng-arrow {
-        color: #333;
-      }
-      .ng-select .ng-arrow-wrapper .ng-arrow {
-        border-top-color: #333;
-      }
-      .ng-select.ng-select-opened > .ng-select-container .ng-arrow {
-        border-bottom-color: #000;
-      }
-      .ng-select .ng-arrow-wrapper:hover .ng-arrow {
-        border-top-color: #000;
-      }
     }
-  }
-}
-body.modal-open {
-  .ng-dropdown-panel {
-    z-index: $zindex-modal-dropdown;
   }
 }
