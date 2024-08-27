@@ -15,7 +15,8 @@ $ng-select-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
 $ng-select-placeholder: lighten($ng-select-primary-text, 40) !default;
 
 $ng-select-height: 50px !default;
-$ng-select-height-sm: 28px;
+$ng-select-height-sm: 36px !default;
+$ng-select-height-xs: 28px !default;
 
 $ng-select-value-padding-left: 10px !default;
 $ng-select-value-font-size: 0.9em !default;
@@ -33,5 +34,26 @@ $ng-select-dropdown-option-disabled: lighten(
 ) !default;
 
 $ng-select-input-text: var(--ms-body-color) !default;
+
+$ng-select-sizes: (
+  "md": (
+    "font-size": 0.9em,
+    "height": $ng-select-height,
+    "icon-font-size": 14px,
+    "icon-padding-left": 2rem,
+  ),
+  "sm": (
+    "font-size": $input-font-size-sm,
+    "height": $ng-select-height-sm,
+    "icon-font-size": 14px,
+    "icon-padding-left": 1.8rem,
+  ),
+  "xs": (
+    "font-size": 12px,
+    "height": $ng-select-height-xs,
+    "icon-font-size": 12px,
+    "icon-padding-left": 1.8rem,
+  ),
+) !default;
 
 @import "@ng-select/ng-select/scss/default.theme.scss";

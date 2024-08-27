@@ -2,6 +2,10 @@
   text-transform: uppercase;
   letter-spacing: var(--ms-btn-letter-spacing);
 
+  > i {
+    font-size: inherit;
+  }
+
   &-icon {
     --ms-nav-link-font-size: var(--ms-btn-icon-font-size);
     @extend .nav-link;

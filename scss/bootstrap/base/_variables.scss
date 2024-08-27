@@ -29,6 +29,14 @@ $badge-text-colors: (
   "danger": #c20a0a,
 ) !default;
 
+// Scrollbar
+$scrollbar-width: 20px;
+$scrollbar-track-bg-color: transparent;
+$scrollbar-track-border-radius: 20px;
+$scrollbar-track-border-width: 6px;
+$scrollbar-thumb-bg-color: #d6dee1;
+$scrollbar-thumb-hover-bg-color: #a8bbbf;
+
 // Cards
 $card-border-radius: 0 !default;
 

@@ -1,5 +1,6 @@
 body {
-  background-color: var(--ms-body-standalone-bg);
+  background-color: var(--#{$prefix}body-standalone-bg);
+  padding-bottom: var(--#{$prefix}page-filters-height, 0);
 }
 
 h1,
