@@ -12166,6 +12166,7 @@ textarea.form-control-lg {
 
 body {
   background-color: var(--ms-body-standalone-bg);
+  padding-bottom: var(--ms-page-filters-height, 0);
 }
 
 h1, .h1,
@@ -21130,6 +21131,34 @@ readers do not read off random characters that represent icons */
 }
 
 /* ------------------------------- Components ------------------------------- */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
+}
+
 .ms-spinner,
 .ms-spinner:after {
   border-radius: 50%;
@@ -21259,6 +21288,9 @@ fdx-message-box .card {
   text-transform: uppercase;
   letter-spacing: var(--ms-btn-letter-spacing);
 }
+.btn > i {
+  font-size: inherit;
+}
 .btn-icon {
   --ms-nav-link-font-size: var(--ms-btn-icon-font-size);
   width: var(--ms-btn-icon-size);
@@ -21311,13 +21343,31 @@ fdx-message-box .card {
 .ng-select.ng-select-single.ng-select-single .ng-select-container .ng-value-container .ng-input, .ng-select.ng-select-multiple.ng-select-single .ng-select-container .ng-value-container .ng-input {
   bottom: 5px;
 }
+.ng-select--md {
+  font-size: 0.9em;
+}
+.ng-select--md .ng-select-container {
+  min-height: 50px;
+}
+.ng-select--md.ng-select-single .ng-select-container {
+  height: 50px;
+}
 .ng-select--sm {
   font-size: 12px;
 }
 .ng-select--sm .ng-select-container {
-  min-height: 28px;
+  min-height: 36px;
 }
 .ng-select--sm.ng-select-single .ng-select-container {
+  height: 36px;
+}
+.ng-select--xs {
+  font-size: 12px;
+}
+.ng-select--xs .ng-select-container {
+  min-height: 28px;
+}
+.ng-select--xs.ng-select-single .ng-select-container {
   height: 28px;
 }
 
@@ -21343,6 +21393,10 @@ body.modal-open .ng-dropdown-panel {
   height: 100%;
   pointer-events: none;
   padding-inline: 0;
+  font-size: 1rem;
+}
+.fdx-select--has-prefix-icon button.btn-select-icon > i {
+  font-size: inherit;
 }
 .fdx-select--cloak .ng-select {
   min-width: 130px;
@@ -21403,6 +21457,9 @@ body.modal-open .ng-dropdown-panel {
 .fdx-select--chip .ng-select .ng-arrow-wrapper:hover .ng-arrow {
   border-top-color: var(--ms-select-chip-border-color);
 }
+.fdx-select--chip .ng-select.ng-select-taggable .ng-select-container {
+  height: auto;
+}
 .fdx-select--chip:has(ng-select.ng-select-disabled) {
   opacity: 0.5;
 }
@@ -21423,6 +21480,69 @@ body.modal-open .ng-dropdown-panel {
 .fdx-select--chip.fdx-select--has-prefix-icon .ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value,
 .fdx-select--chip.fdx-select--has-prefix-icon .ng-select .ng-select-container .ng-value-container .ng-input > input {
   padding-left: 1.6rem;
+}
+.fdx-select--md .ng-select {
+  font-size: 0.9em;
+}
+.fdx-select--md .ng-select .ng-select-container {
+  min-height: 50px;
+}
+.fdx-select--md .ng-select.ng-select-single .ng-select-container {
+  height: 50px;
+}
+.fdx-select--md .btn-select-icon {
+  font-size: 14px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.fdx-select--md.fdx-select--has-prefix-icon .ng-select .ng-select-container .ng-value-container .ng-placeholder,
+.fdx-select--md.fdx-select--has-prefix-icon .ng-select .ng-select-container .ng-value-container .ng-input > input {
+  padding-left: 2rem;
+}
+.fdx-select--md.fdx-select--has-prefix-icon .ng-select.ng-select-single .ng-select-container .ng-value-container .ng-value, .fdx-select--md.fdx-select--has-prefix-icon .ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value {
+  padding-left: 2rem;
+}
+.fdx-select--sm .ng-select {
+  font-size: 12px;
+}
+.fdx-select--sm .ng-select .ng-select-container {
+  min-height: 36px;
+}
+.fdx-select--sm .ng-select.ng-select-single .ng-select-container {
+  height: 36px;
+}
+.fdx-select--sm .btn-select-icon {
+  font-size: 14px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.fdx-select--sm.fdx-select--has-prefix-icon .ng-select .ng-select-container .ng-value-container .ng-placeholder,
+.fdx-select--sm.fdx-select--has-prefix-icon .ng-select .ng-select-container .ng-value-container .ng-input > input {
+  padding-left: 1.8rem;
+}
+.fdx-select--sm.fdx-select--has-prefix-icon .ng-select.ng-select-single .ng-select-container .ng-value-container .ng-value, .fdx-select--sm.fdx-select--has-prefix-icon .ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value {
+  padding-left: 1.8rem;
+}
+.fdx-select--xs .ng-select {
+  font-size: 12px;
+}
+.fdx-select--xs .ng-select .ng-select-container {
+  min-height: 28px;
+}
+.fdx-select--xs .ng-select.ng-select-single .ng-select-container {
+  height: 28px;
+}
+.fdx-select--xs .btn-select-icon {
+  font-size: 12px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.fdx-select--xs.fdx-select--has-prefix-icon .ng-select .ng-select-container .ng-value-container .ng-placeholder,
+.fdx-select--xs.fdx-select--has-prefix-icon .ng-select .ng-select-container .ng-value-container .ng-input > input {
+  padding-left: 1.8rem;
+}
+.fdx-select--xs.fdx-select--has-prefix-icon .ng-select.ng-select-single .ng-select-container .ng-value-container .ng-value, .fdx-select--xs.fdx-select--has-prefix-icon .ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value {
+  padding-left: 1.8rem;
 }
 
 .ms-save-input-badge .badge {
@@ -21450,6 +21570,21 @@ body.modal-open .ng-dropdown-panel {
   line-height: 0;
   top: 50% !important;
   transform: translateY(-50%);
+}
+
+.form-check-input:disabled {
+  background-color: #c3c3c3;
+  border-color: #c3c3c3;
+}
+.form-check-input:disabled:checked[type=checkbox] {
+  --ms-form-check-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='%23333' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/></svg>");
+}
+
+.fdx-input-checkbox--lg .form-check-label {
+  font-size: 1.25rem;
+}
+.fdx-input-checkbox--sm .form-check-label {
+  font-size: 12px;
 }
 
 ms-input.ng-touched.ng-invalid .form-control,
@@ -21598,18 +21733,18 @@ fdx-input-block-editor.ng-invalid.ng-touched .form-label, fdx-input-block-editor
   background-color: #eee;
   border: 1px solid #dfdfdf;
 }
+.form__footer {
+  text-align: right;
+}
+@media (max-width: 991.98px) {
+  .form__footer > .btn:first-child:last-child {
+    width: 100%;
+  }
+}
 .form-signin {
   max-width: 330px;
   padding: 15px;
   margin: 3rem auto;
-}
-
-.form-check-input:disabled {
-  background-color: #c3c3c3;
-  border-color: #c3c3c3;
-}
-.form-check-input:disabled:checked[type=checkbox] {
-  --ms-form-check-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='%23333' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/></svg>");
 }
 
 .ms-input-block-editor .codex-editor {

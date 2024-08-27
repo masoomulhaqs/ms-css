@@ -1,3 +1,12 @@
+# [1.1.0](https://github.com/masoomulhaqs/ms-css/compare/v1.0.14...v1.1.0) (2024-08-27)
+
+
+### Features
+
+* form controls enhancements ([f357268](https://github.com/masoomulhaqs/ms-css/commit/f3572681709437c9143d1bc41aa84b5da12f4219))
+
+
+
 ## [1.0.14](https://github.com/masoomulhaqs/ms-css/compare/v1.0.13...v1.0.14) (2024-08-11)
 
 
