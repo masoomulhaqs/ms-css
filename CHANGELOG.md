@@ -1,3 +1,12 @@
+# [1.2.0](https://github.com/masoomulhaqs/ms-css/compare/v1.1.0...v1.2.0) (2024-09-13)
+
+
+### Features
+
+* added skeleton loaders, data-* components & form controls ([20c7b7a](https://github.com/masoomulhaqs/ms-css/commit/20c7b7a42171e2dc273ce4fd6c36042636d560e3))
+
+
+
 # [1.1.0](https://github.com/masoomulhaqs/ms-css/compare/v1.0.14...v1.1.0) (2024-08-27)
 
 

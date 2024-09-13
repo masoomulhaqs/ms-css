@@ -12085,6 +12085,14 @@ textarea.form-control-lg {
     transform: translateX(0%);
   }
 }
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
 :root {
   --ms-font-family-roboto: var(--ms-font-sans-serif);
   --ms-font-family-roboto-slab: system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Noto Sans, Liberation Sans, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
@@ -12157,6 +12165,9 @@ textarea.form-control-lg {
   --ms-spinner-border-width: 0.25em;
   --ms-spinner-color: #6610f2;
   --ms-spinner-alt-color: rgba(102, 16, 242, 0.15);
+  --ms-skeleton-bg: #fff; /* Background color of the skeleton */
+  --ms-skeleton-animation: linear-gradient(90deg, #f6f6f6 25%, #fff 50%, #f6f6f6 75%);
+  --ms-skeleton-duration: 1.5s; /* Duration of the animation */
   --ms-select-chip-fs: 0.9em;
   --ms-select-chip-height: 30px;
   --ms-select-chip-color: #333;
@@ -12244,10 +12255,10 @@ input[type=number] {
 }
 .ng-select .ng-select-container .ng-value-container {
   align-items: center;
-  padding-left: 10px;
+  padding-left: 14px;
 }
 [dir=rtl] .ng-select .ng-select-container .ng-value-container {
-  padding-right: 10px;
+  padding-right: 14px;
   padding-left: 0;
 }
 
@@ -12260,11 +12271,11 @@ input[type=number] {
 .ng-select.ng-select-single .ng-select-container .ng-value-container .ng-input {
   top: 5px;
   left: 0;
-  padding-left: 10px;
+  padding-left: 14px;
   padding-right: 50px;
 }
 [dir=rtl] .ng-select.ng-select-single .ng-select-container .ng-value-container .ng-input {
-  padding-right: 10px;
+  padding-right: 14px;
   padding-left: 50px;
 }
 
@@ -21183,6 +21194,16 @@ readers do not read off random characters that represent icons */
   align-items: center;
   gap: 1rem;
 }
+.ms-spinner__wrapper--fixed {
+  margin: 0;
+  position: fixed;
+  inset: 0;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: rgba(255, 255, 255, 0.6);
+  z-index: 1031;
+  justify-content: center;
+}
 .ms-spinner__text {
   font-size: 1rem;
 }
@@ -21216,9 +21237,53 @@ readers do not read off random characters that represent icons */
   animation: line-loader 2s linear infinite;
 }
 
+.ms-skeleton {
+  position: relative;
+  background-color: var(--ms-skeleton-bg);
+  overflow: hidden;
+  border-radius: 4px;
+  /* rectangle skeleton */
+  /* circle skeleton */
+  /* text skeleton */
+}
+.ms-skeleton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--ms-skeleton-animation);
+  background-size: 200% 100%;
+  animation: shimmer var(--ms-skeleton-duration) infinite;
+}
+.ms-skeleton--rect {
+  width: 100%;
+  height: 100px;
+}
+.ms-skeleton--circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.ms-skeleton--text {
+  width: 100%;
+  height: 20px;
+  margin-bottom: 10px;
+}
+
 .las,
 .lar {
   font-size: var(--ms-icon-font-size, 20px);
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 300, "GRAD" 0, "opsz" 24;
+  font-size: var(--ms-icon-font-size, 20px);
+}
+
+fdx-icon {
+  line-height: 0;
 }
 
 .badge-info {
@@ -21340,6 +21405,9 @@ fdx-message-box .card {
 .ng-select .ng-select-container .ng-value-container .ng-input > input {
   height: 100%;
 }
+.ng-select .ng-arrow-wrapper {
+  padding-right: 12px;
+}
 .ng-select.ng-select-single.ng-select-single .ng-select-container .ng-value-container .ng-input, .ng-select.ng-select-multiple.ng-select-single .ng-select-container .ng-value-container .ng-input {
   bottom: 5px;
 }
@@ -21352,6 +21420,9 @@ fdx-message-box .card {
 .ng-select--md.ng-select-single .ng-select-container {
   height: 50px;
 }
+.ng-select--md .ng-dropdown-panel {
+  font-size: 0.9em;
+}
 .ng-select--sm {
   font-size: 12px;
 }
@@ -21360,6 +21431,9 @@ fdx-message-box .card {
 }
 .ng-select--sm.ng-select-single .ng-select-container {
   height: 36px;
+}
+.ng-select--sm .ng-dropdown-panel {
+  font-size: 12px;
 }
 .ng-select--xs {
   font-size: 12px;
@@ -21370,6 +21444,9 @@ fdx-message-box .card {
 .ng-select--xs.ng-select-single .ng-select-container {
   height: 28px;
 }
+.ng-select--xs .ng-dropdown-panel {
+  font-size: 12px;
+}
 
 .ng-dropdown-panel .ng-dropdown-panel-items .ng-option {
   padding: 0.625rem 1rem;
@@ -21379,13 +21456,13 @@ body.modal-open .ng-dropdown-panel {
   z-index: 1100;
 }
 
-.fdx-select--has-prefix-icon {
-  isolation: isolate;
-}
 .fdx-select--has-prefix-icon .ng-select .ng-select-container .ng-value-container .ng-placeholder,
 .fdx-select--has-prefix-icon .ng-select.ng-select-single .ng-select-container .ng-value-container .ng-value,
 .fdx-select--has-prefix-icon .ng-select .ng-select-container .ng-value-container .ng-input > input {
   padding-left: 2rem;
+}
+.fdx-select--has-prefix-icon .ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value {
+  padding-left: 0;
 }
 .fdx-select--has-prefix-icon button.btn-select-icon {
   z-index: 1100;
@@ -21490,6 +21567,9 @@ body.modal-open .ng-dropdown-panel {
 .fdx-select--md .ng-select.ng-select-single .ng-select-container {
   height: 50px;
 }
+.fdx-select--md .ng-select .ng-dropdown-panel {
+  font-size: 0.9em;
+}
 .fdx-select--md .btn-select-icon {
   font-size: 14px;
   padding-top: 0;
@@ -21510,6 +21590,9 @@ body.modal-open .ng-dropdown-panel {
 }
 .fdx-select--sm .ng-select.ng-select-single .ng-select-container {
   height: 36px;
+}
+.fdx-select--sm .ng-select .ng-dropdown-panel {
+  font-size: 12px;
 }
 .fdx-select--sm .btn-select-icon {
   font-size: 14px;
@@ -21532,6 +21615,9 @@ body.modal-open .ng-dropdown-panel {
 .fdx-select--xs .ng-select.ng-select-single .ng-select-container {
   height: 28px;
 }
+.fdx-select--xs .ng-select .ng-dropdown-panel {
+  font-size: 12px;
+}
 .fdx-select--xs .btn-select-icon {
   font-size: 12px;
   padding-top: 0;
@@ -21543,6 +21629,9 @@ body.modal-open .ng-dropdown-panel {
 }
 .fdx-select--xs.fdx-select--has-prefix-icon .ng-select.ng-select-single .ng-select-container .ng-value-container .ng-value, .fdx-select--xs.fdx-select--has-prefix-icon .ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value {
   padding-left: 1.8rem;
+}
+.fdx-select .ng-select .ng-dropdown-panel {
+  min-width: 180px;
 }
 
 .ms-save-input-badge .badge {
@@ -21735,11 +21824,31 @@ fdx-input-block-editor.ng-invalid.ng-touched .form-label, fdx-input-block-editor
 }
 .form__footer {
   text-align: right;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 0.5rem;
+}
+@media (max-width: 991.98px) {
+  .form__footer {
+    flex-direction: column;
+  }
 }
 @media (max-width: 991.98px) {
   .form__footer > .btn:first-child:last-child {
     width: 100%;
   }
+}
+.form.form--not-white .form-control:disabled {
+  opacity: 1;
+  color: var(--ms-secondary);
+  border-color: var(--ms-secondary-border-subtle);
+  background-color: #dadee4;
+}
+.form.form--not-white .ng-select.ng-select-disabled > .ng-select-container {
+  color: var(--ms-secondary);
+  border-color: var(--ms-secondary-border-subtle);
+  background-color: #dadee4;
 }
 .form-signin {
   max-width: 330px;
@@ -21749,6 +21858,15 @@ fdx-input-block-editor.ng-invalid.ng-touched .form-label, fdx-input-block-editor
 
 .ms-input-block-editor .codex-editor {
   background-color: #fff;
+}
+.ms-input-block-editor:has(.ce-toolbar__actions--opened, .ce-toolbar--opened) {
+  position: relative;
+  z-index: 10;
+}
+@media (max-width: 991.98px) {
+  .ms-input-block-editor:has(.ce-toolbar__actions--opened, .ce-toolbar--opened) {
+    z-index: 1200;
+  }
 }
 .ms-input-block-editor .form-label {
   margin-bottom: 0;
@@ -21794,6 +21912,14 @@ fdx-input-block-editor.ng-invalid.ng-touched .form-label, fdx-input-block-editor
   .ms-input-block-editor:has(.codex-editor--narrow) .invalid-feedback {
     margin-left: 0;
   }
+}
+.ms-input-block-editor .ce-popover-item[data-item-name=paragraph] .ce-popover-item__icon svg {
+  width: 10px;
+  height: auto;
+}
+.ms-input-block-editor .ce-popover-item[data-item-name=code] .ce-popover-item__icon svg {
+  width: 12px;
+  height: auto;
 }
 
 .ms-section__container {
@@ -21868,6 +21994,10 @@ table th.th-heading-sortable--desc:after {
 table td.td-column-actions {
   text-align: center;
 }
+table.table-no-borders tbody th,
+table.table-no-borders tbody td {
+  border-bottom: 0;
+}
 
 .ms-table {
   display: block;
@@ -21899,6 +22029,7 @@ table td.td-column-actions {
 .ms-table .table-responsive {
   margin-left: -2rem;
   margin-right: -2rem;
+  max-height: 580px;
 }
 .ms-table .btn-table-action {
   min-width: 110px;
@@ -22145,6 +22276,30 @@ table td.td-column-actions {
   .container.container--contact-page > .row, .ms-auth-layout__container--two-column .container.container--contact-page > .ms-auth-layout__row {
     --ms-gutter-x: 1.5rem;
   }
+}
+
+.fdx-data-field--user {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.fdx-data-block-list__item-label {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04rem;
+  color: #666;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+.fdx-data-block-list__item-value fdx-status-badge > span {
+  margin-top: 0.25rem;
+}
+
+.nav-link.nav-link--with-icon, .nav-link--with-icon.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 /* --------------------------------- Layouts -------------------------------- */
