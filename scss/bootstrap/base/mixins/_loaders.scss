@@ -1,0 +1,38 @@
+@mixin skeleton-loader {
+  position: relative;
+  background-color: var(--ms-skeleton-bg);
+  overflow: hidden;
+  border-radius: 4px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--ms-skeleton-animation);
+    background-size: 200% 100%;
+    animation: shimmer var(--ms-skeleton-duration) infinite;
+  }
+
+  /* rectangle skeleton */
+  &--rect {
+    width: 100%;
+    height: 100px;
+  }
+
+  /* circle skeleton */
+  &--circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+
+  /* text skeleton */
+  &--text {
+    width: 100%;
+    height: 20px;
+    margin-bottom: 10px;
+  }
+}

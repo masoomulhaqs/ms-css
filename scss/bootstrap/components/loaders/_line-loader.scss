@@ -1,0 +1,21 @@
+.ms-line-loader {
+  --ms-line-loader-height: 4px;
+  width: 100%;
+  height: var(--ms-line-loader-height);
+  display: inline-block;
+  position: relative;
+  background: rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    width: 180px;
+    height: var(--ms-line-loader-height);
+    background: rgba($color: $primary, $alpha: 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    animation: line-loader 2s linear infinite;
+  }
+}

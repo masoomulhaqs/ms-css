@@ -115,6 +115,11 @@
   --ms-spinner-color: #{$spinner-color};
   --ms-spinner-alt-color: #{$spinner-alt-color};
 
+  // Skeleton Animation
+  --ms-skeleton-bg: #{$skeleton-bg}; /* Background color of the skeleton */
+  --ms-skeleton-animation: #{$skeleton-animation};
+  --ms-skeleton-duration: #{$skeleton-duration}; /* Duration of the animation */
+
   // Forms
   --ms-select-chip-fs: 0.9em;
   --ms-select-chip-height: 30px;

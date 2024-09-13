@@ -3,6 +3,15 @@
     background-color: #fff;
   }
 
+  &:has(.ce-toolbar__actions--opened, .ce-toolbar--opened) {
+    position: relative;
+    z-index: 10;
+
+    @include media-breakpoint-below-desktop() {
+      z-index: 1200;
+    }
+  }
+
   .form-label {
     margin-bottom: 0;
 
@@ -53,6 +62,22 @@
     .invalid-feedback {
       @include media-breakpoint-desktop-and-above() {
         margin-left: 0;
+      }
+    }
+  }
+
+  // Toolbar
+  .ce-popover-item {
+    &[data-item-name="paragraph"] {
+      .ce-popover-item__icon svg {
+        width: 10px;
+        height: auto;
+      }
+    }
+    &[data-item-name="code"] {
+      .ce-popover-item__icon svg {
+        width: 12px;
+        height: auto;
       }
     }
   }

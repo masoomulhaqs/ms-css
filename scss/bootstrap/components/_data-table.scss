@@ -48,6 +48,15 @@ table {
       text-align: center;
     }
   }
+
+  &.table-no-borders {
+    tbody {
+      th,
+      td {
+        border-bottom: 0;
+      }
+    }
+  }
 }
 
 .ms-table {
@@ -86,6 +95,7 @@ table {
     &-responsive {
       margin-left: -2rem;
       margin-right: -2rem;
+      max-height: 580px;
     }
   }
 

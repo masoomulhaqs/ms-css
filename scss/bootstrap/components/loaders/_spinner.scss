@@ -22,6 +22,17 @@
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+
+    &--fixed {
+      margin: 0;
+      position: fixed;
+      inset: 0;
+      width: 100dvw;
+      height: 100dvh;
+      background-color: rgba($color: #fff, $alpha: 0.6);
+      z-index: $zindex-fixed + 1;
+      justify-content: center;
+    }
   }
 
   &__text {
@@ -35,28 +46,7 @@
 
   &--xs {
     --ms-spinner-radius: 12px;
+
     --ms-spinner-border-width: 2px;
-  }
-}
-
-.ms-line-loader {
-  --ms-line-loader-height: 4px;
-  width: 100%;
-  height: var(--ms-line-loader-height);
-  display: inline-block;
-  position: relative;
-  background: rgba(0, 0, 0, 0.15);
-  overflow: hidden;
-
-  &::after {
-    content: "";
-    width: 180px;
-    height: var(--ms-line-loader-height);
-    background: rgba($color: $primary, $alpha: 0.4);
-    position: absolute;
-    top: 0;
-    left: 0;
-    box-sizing: border-box;
-    animation: line-loader 2s linear infinite;
   }
 }

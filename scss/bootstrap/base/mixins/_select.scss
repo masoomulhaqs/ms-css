@@ -14,6 +14,10 @@
   &.ng-select-single .ng-select-container {
     height: $height;
   }
+
+  .ng-dropdown-panel {
+    font-size: $font-size;
+  }
 }
 
 @mixin fdx-select-state(
@@ -59,7 +63,7 @@
 }
 
 @mixin fdx-select--has-prefix-icon {
-  isolation: isolate;
+  // isolation: isolate;
 
   .ng-select .ng-select-container .ng-value-container .ng-placeholder,
   .ng-select.ng-select-single
@@ -68,6 +72,13 @@
     .ng-value,
   .ng-select .ng-select-container .ng-value-container .ng-input > input {
     padding-left: rem(32);
+  }
+
+  .ng-select.ng-select-multiple
+    .ng-select-container
+    .ng-value-container
+    .ng-value {
+    padding-left: 0;
   }
 
   button.btn-select-icon {

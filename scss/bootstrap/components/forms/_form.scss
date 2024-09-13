@@ -90,10 +90,35 @@
 
   &__footer {
     text-align: right;
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    margin-top: 0.5rem;
+
+    @include media-breakpoint-below-desktop() {
+      flex-direction: column;
+    }
 
     > .btn:first-child:last-child {
       @include media-breakpoint-below-desktop() {
         width: 100%;
+      }
+    }
+  }
+
+  &#{&}--not-white {
+    .form-control:disabled {
+      opacity: 1;
+      color: var(--ms-secondary);
+      border-color: var(--ms-secondary-border-subtle);
+      background-color: #dadee4;
+    }
+
+    .ng-select.ng-select-disabled {
+      > .ng-select-container {
+        color: var(--ms-secondary);
+        border-color: var(--ms-secondary-border-subtle);
+        background-color: #dadee4;
       }
     }
   }

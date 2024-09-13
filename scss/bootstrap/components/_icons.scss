@@ -1,4 +1,16 @@
+// Line Awesome Icons
 .las,
 .lar {
   font-size: var(--ms-icon-font-size, 20px);
+}
+
+// Material Icons
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 300, "GRAD" 0, "opsz" 24;
+  font-size: var(--ms-icon-font-size, 20px);
+}
+
+// FDX Icons
+fdx-icon {
+  line-height: 0;
 }

@@ -49,6 +49,16 @@ $spinner-border-width: 5px !default;
 $spinner-color: $primary !default;
 $spinner-alt-color: rgba($spinner-color, 0.15) !default;
 
+// Skeleton animation
+$skeleton-bg: #fff; // Background color of the skeleton
+$skeleton-animation: linear-gradient(
+  90deg,
+  #f6f6f6 25%,
+  $skeleton-bg 50%,
+  #f6f6f6 75%
+);
+$skeleton-duration: 1.5s; // Duration of the animation
+
 // Icons
 $icon-font-size: 20px !default;
 

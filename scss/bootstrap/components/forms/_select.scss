@@ -3,6 +3,10 @@
     height: 100%;
   }
 
+  .ng-arrow-wrapper {
+    padding-right: 12px;
+  }
+
   &.ng-select-single,
   &.ng-select-multiple {
     &.ng-select-single {
@@ -48,6 +52,12 @@ body.modal-open {
   @each $size, $data in $ng-select-sizes {
     &--#{$size} {
       @include fdx-select-state($size, $data...);
+    }
+  }
+
+  .ng-select {
+    .ng-dropdown-panel {
+      min-width: 180px;
     }
   }
 }
