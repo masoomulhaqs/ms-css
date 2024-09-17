@@ -21348,6 +21348,10 @@ button.badge {
 fdx-message-box .card {
   --ms-card-border-color: var(--ms-border-color);
 }
+fdx-message-box fdx-icon .material-symbols-outlined {
+  font-size: 54px;
+  color: var(--ms-success);
+}
 
 .btn {
   text-transform: uppercase;
@@ -21377,7 +21381,6 @@ fdx-message-box .card {
 .btn-icon-group--simple .btn-icon {
   font-size: var(--ms-btn-group-icon-font-size);
 }
-
 .btn-full-below-xs {
   width: 100%;
 }
@@ -21465,7 +21468,7 @@ body.modal-open .ng-dropdown-panel {
   padding-left: 0;
 }
 .fdx-select--has-prefix-icon button.btn-select-icon {
-  z-index: 1100;
+  z-index: 1;
   left: 0.875rem;
   height: 100%;
   pointer-events: none;
@@ -21474,6 +21477,9 @@ body.modal-open .ng-dropdown-panel {
 }
 .fdx-select--has-prefix-icon button.btn-select-icon > i {
   font-size: inherit;
+}
+.fdx-select--has-prefix-icon.fdx-select--open button.btn-select-icon {
+  z-index: 1100;
 }
 .fdx-select--cloak .ng-select {
   min-width: 130px;
@@ -21834,6 +21840,10 @@ fdx-input-block-editor.ng-invalid.ng-touched .form-label, fdx-input-block-editor
     flex-direction: column;
   }
 }
+.form__footer--column {
+  flex-direction: column;
+  gap: 0;
+}
 @media (max-width: 991.98px) {
   .form__footer > .btn:first-child:last-child {
     width: 100%;
@@ -21864,7 +21874,7 @@ fdx-input-block-editor.ng-invalid.ng-touched .form-label, fdx-input-block-editor
   z-index: 10;
 }
 @media (max-width: 991.98px) {
-  .ms-input-block-editor:has(.ce-toolbar__actions--opened, .ce-toolbar--opened) {
+  .ms-input-block-editor:has(.codex-editor--toolbox-opened) {
     z-index: 1200;
   }
 }
@@ -22301,6 +22311,9 @@ table.table-no-borders tbody td {
   align-items: center;
   gap: 0.5rem;
 }
+.nav-link.nav-link--with-icon:not(.active) .nav-link-count, .nav-link--with-icon.btn-icon:not(.active) .nav-link-count {
+  display: none;
+}
 
 /* --------------------------------- Layouts -------------------------------- */
 /* -------------------------------------------------------------------------- */
@@ -22446,6 +22459,18 @@ table.table-no-borders tbody td {
 }
 .site-header .btn-menu-back {
   padding: 0;
+  display: none;
+}
+.site-header .btn-help,
+.site-header .btn-notifications {
+  display: flex;
+  align-items: center;
+}
+.site-header .btn-help .material-symbols-outlined,
+.site-header .btn-notifications .material-symbols-outlined {
+  font-size: 22px;
+}
+.site-header .btn-account-menu.dropdown-toggle::after {
   display: none;
 }
 @media (max-width: 991.98px) {
@@ -22747,6 +22772,11 @@ table.table-no-borders tbody td {
   background-color: var(--ms-white);
   padding-top: 5rem;
   padding-bottom: 5rem;
+}
+
+fdx-error-found-page > section {
+  max-width: 580px;
+  margin-inline: auto;
 }
 
 /* -------------------------------------------------------------------------- */

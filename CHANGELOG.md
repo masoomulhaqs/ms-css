@@ -1,3 +1,12 @@
+# [1.3.0](https://github.com/masoomulhaqs/ms-css/compare/v1.2.0...v1.3.0) (2024-09-17)
+
+
+### Features
+
+* improvements on form controls & error page ([c56dfb4](https://github.com/masoomulhaqs/ms-css/commit/c56dfb4a1cb860fdcc03e396a117ffe13528a23b))
+
+
+
 # [1.2.0](https://github.com/masoomulhaqs/ms-css/compare/v1.1.0...v1.2.0) (2024-09-13)
 
 
