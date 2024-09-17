@@ -82,7 +82,7 @@
   }
 
   button.btn-select-icon {
-    z-index: $zindex-select-dropdown;
+    z-index: 1;
     left: rem(14);
     height: 100%;
     pointer-events: none;
@@ -91,6 +91,12 @@
 
     > i {
       font-size: inherit;
+    }
+  }
+
+  &.fdx-select--open {
+    button.btn-select-icon {
+      z-index: $zindex-select-dropdown;
     }
   }
 }

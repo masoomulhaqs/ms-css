@@ -99,6 +99,11 @@
       flex-direction: column;
     }
 
+    &--column {
+      flex-direction: column;
+      gap: 0;
+    }
+
     > .btn:first-child:last-child {
       @include media-breakpoint-below-desktop() {
         width: 100%;

@@ -12,4 +12,11 @@ fdx-message-box {
   .card {
     --ms-card-border-color: var(--ms-border-color);
   }
+
+  fdx-icon {
+    .material-symbols-outlined {
+      font-size: 54px;
+      color: var(--ms-success);
+    }
+  }
 }

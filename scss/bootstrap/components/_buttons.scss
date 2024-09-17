@@ -33,6 +33,9 @@
       }
     }
   }
+
+  &-help {
+  }
 }
 
 @each $breakpoint, $value in $grid-breakpoints {

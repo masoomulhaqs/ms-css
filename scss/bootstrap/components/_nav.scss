@@ -3,5 +3,9 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+
+    &:not(.active) .nav-link-count {
+      display: none;
+    }
   }
 }

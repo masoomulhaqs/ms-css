@@ -6,7 +6,9 @@
   &:has(.ce-toolbar__actions--opened, .ce-toolbar--opened) {
     position: relative;
     z-index: 10;
+  }
 
+  &:has(.codex-editor--toolbox-opened) {
     @include media-breakpoint-below-desktop() {
       z-index: 1200;
     }

@@ -19,7 +19,22 @@
     display: none;
   }
 
+  .btn-help,
+  .btn-notifications {
+    display: flex;
+    align-items: center;
+
+    .material-symbols-outlined {
+      font-size: 22px;
+    }
+  }
+
   .btn-account-menu {
+    &.dropdown-toggle {
+      &::after {
+        display: none;
+      }
+    }
     @include media-breakpoint-below-desktop() {
       &:after {
         display: none;
