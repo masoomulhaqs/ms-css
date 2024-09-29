@@ -1,3 +1,12 @@
+# [1.4.0](https://github.com/masoomulhaqs/ms-css/compare/v1.3.0...v1.4.0) (2024-09-29)
+
+
+### Features
+
+* dropdown, nav, button, icons & utility improvements ([f29b79d](https://github.com/masoomulhaqs/ms-css/commit/f29b79d8501d7bcb05704ed690a747d7a305b3bb))
+
+
+
 # [1.3.0](https://github.com/masoomulhaqs/ms-css/compare/v1.2.0...v1.3.0) (2024-09-17)
 
 
