@@ -9,3 +9,12 @@
     }
   }
 }
+
+.nav-underline {
+  --ms-nav-underline-border-width: 3px;
+  --ms-nav-underline-link-active-color: var(--ms-primary);
+  .nav-link {
+    --ms-nav-link-color: var(--ms-secondary-color);
+    --ms-nav-link-hover-color: var(--ms-dark-subtle);
+  }
+}

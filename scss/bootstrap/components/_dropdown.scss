@@ -1,3 +1,46 @@
 .dropdown-menu {
   @extend .shadow-lg;
 }
+
+.dropdown {
+  &.ms-dropdown {
+    .dropdown-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+
+  &.ms-dropdown--no-caret {
+    .dropdown-toggle {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &.ms-dropdown--sm {
+    .dropdown-menu {
+      --ms-dropdown-min-width: 10rem;
+      --ms-dropdown-padding-y: 0.25rem;
+    }
+
+    .dropdown-menu {
+      --ms-dropdown-font-size: 14px;
+    }
+  }
+
+  .dropdown-item {
+    &.text-danger,
+    &.text-success {
+      background-color: transparent !important;
+    }
+  }
+}
+
+// Theme dropdown
+fdx-select-theme-dropdown {
+  .tooltip-inner {
+    white-space: nowrap;
+  }
+}

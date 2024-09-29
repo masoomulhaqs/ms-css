@@ -1456,7 +1456,7 @@ $accordion-button-active-color: var(--#{$prefix}primary-text-emphasis) !default;
 // fusv-disable
 $accordion-button-focus-border-color: $input-focus-border-color !default; // Deprecated in v5.3.3
 // fusv-enable
-$accordion-button-focus-box-shadow: $btn-focus-box-shadow !default;
+$accordion-button-focus-box-shadow: none !default;
 
 $accordion-icon-width: 1.25rem !default;
 $accordion-icon-color: $body-color !default;

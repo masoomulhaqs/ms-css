@@ -6,6 +6,18 @@
       text-decoration: none;
     }
   }
+
+  &#{&}--overdue {
+    border-left: 3px solid var(--ms-danger-bg-subtle);
+  }
+
+  &#{&}--completed {
+    border-left: 3px solid var(--ms-success-bg-subtle);
+  }
+
+  &#{&}--trash {
+    border-left: 3px solid --ms-secondary-bg-subtle;
+  }
 }
 
 fdx-message-box {
@@ -13,7 +25,7 @@ fdx-message-box {
     --ms-card-border-color: var(--ms-border-color);
   }
 
-  fdx-icon {
+  fdx-icon.fdx-message-box-icon {
     .material-symbols-outlined {
       font-size: 54px;
       color: var(--ms-success);

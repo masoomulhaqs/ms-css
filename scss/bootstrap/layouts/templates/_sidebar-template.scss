@@ -136,6 +136,23 @@
       opacity: 1;
       height: max-content;
     }
+
+    .nav .nav {
+      pointer-events: none;
+      display: none;
+    }
+    .nav .nav-link.active + .nav,
+    .nav .active.btn-icon + .nav {
+      pointer-events: all;
+      display: block;
+    }
+    .nav-link.is-heading {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 500;
+      opacity: 0.7;
+    }
   }
 
   &__body {

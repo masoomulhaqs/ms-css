@@ -1,0 +1,18 @@
+.ms-accordion {
+  box-shadow: var(--ms-box-shadow);
+  border-radius: var(--ms-accordion-border-radius);
+
+  &.ms-accordion-white {
+    .accordion-button {
+      font-weight: 700;
+      &:not(.collapsed) {
+        background-color: var(--ms-white);
+      }
+
+      &:focus {
+        border-bottom: var(--ms-accordion-border-width) solid
+          var(--ms-accordion-border-color);
+      }
+    }
+  }
+}

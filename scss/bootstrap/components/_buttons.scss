@@ -34,7 +34,19 @@
     }
   }
 
-  &-help {
+  &.btn-has-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    min-height: 30px;
+    min-width: 30px;
+  }
+
+  fdx-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 

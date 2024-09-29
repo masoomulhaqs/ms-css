@@ -25,6 +25,12 @@
   &--md {
     font-size: var(--ms-font-size-md);
   }
+  &--12 {
+    font-size: var(--ms-font-size-12) !important;
+  }
+  &--10 {
+    font-size: var(--ms-font-size-10) !important;
+  }
 }
 
 .text {
