@@ -1,3 +1,12 @@
+# [1.5.0](https://github.com/masoomulhaqs/ms-css/compare/v1.4.0...v1.5.0) (2024-10-06)
+
+
+### Features
+
+* content components enhacements ([6ccc6b2](https://github.com/masoomulhaqs/ms-css/commit/6ccc6b2d04e58e234d057d1b3ee51d50ac8a0eec))
+
+
+
 # [1.4.0](https://github.com/masoomulhaqs/ms-css/compare/v1.3.0...v1.4.0) (2024-09-29)
 
 

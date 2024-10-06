@@ -21388,6 +21388,30 @@ fdx-message-box fdx-icon.fdx-message-box-icon .material-symbols-outlined {
 .ms-accordion.ms-accordion-white .accordion-button:focus {
   border-bottom: var(--ms-accordion-border-width) solid var(--ms-accordion-border-color);
 }
+.ms-accordion.ms-accordion-inherit {
+  box-shadow: none;
+  border: 0 !important;
+}
+.ms-accordion.ms-accordion-inherit .accordion-item {
+  border: 0 !important;
+}
+.ms-accordion.ms-accordion-inherit .accordion-header {
+  border: 0 !important;
+  box-shadow: none;
+}
+.ms-accordion.ms-accordion-inherit .accordion-button {
+  font-weight: 700;
+  padding: 0;
+  border: 0 !important;
+  box-shadow: none;
+}
+.ms-accordion.ms-accordion-inherit .accordion-button:not(.collapsed) {
+  background-color: var(--ms-white);
+}
+.ms-accordion.ms-accordion-inherit .accordion-body {
+  border: 0 !important;
+  padding: 1rem 0 0;
+}
 
 .btn {
   text-transform: uppercase;
@@ -22017,6 +22041,56 @@ fdx-input-block-editor.ng-invalid.ng-touched .form-label, fdx-input-block-editor
 .ms-section__sub-title {
   font-size: 1.5rem;
   margin-bottom: 1rem;
+}
+
+.fdx-collapsible-section {
+  padding-left: 24px;
+  position: relative;
+  margin-bottom: 2.5rem;
+  font-size: 14px;
+  line-height: 1.8;
+}
+.fdx-collapsible-section__header {
+  display: flex;
+  align-items: center;
+}
+.fdx-collapsible-section__header h6, .fdx-collapsible-section__header .h6 {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+.fdx-collapsible-section__header-actions {
+  margin-left: auto;
+}
+.fdx-collapsible-section__collapse-action {
+  all: unset;
+  padding: 0;
+  background: var(--ms-secondary-bg-subtle);
+  position: absolute;
+  left: 0;
+  width: 1rem;
+  height: 1rem;
+  border-radius: var(--ms-border-radius);
+}
+.fdx-collapsible-section__collapse-action > fdx-icon {
+  display: block;
+  transition: transform 0.1s ease-in-out;
+}
+.fdx-collapsible-section__collapse-action .material-symbols-outlined {
+  font-size: 1rem;
+}
+.fdx-collapsible-section.fdx-collapsible-section--collapsed .fdx-collapsible-section__collapse-action > fdx-icon {
+  transform: rotate(-90deg);
+}
+.fdx-collapsible-section__body {
+  margin-top: 0.8rem;
+}
+.fdx-collapsible-section .btn.btn-has-icon {
+  min-height: 20px;
+  min-width: 20px;
+}
+.fdx-collapsible-section .btn.btn-has-icon .material-symbols-outlined {
+  font-size: 14px;
 }
 
 .dropdown.ms-dropdown .dropdown-item {
@@ -22920,6 +22994,10 @@ fdx-error-found-page > section {
   height: 100px;
   background: transparent no-repeat center;
   background-size: 100%;
+}
+
+.pointer-events-none {
+  pointer-events: none !important;
 }
 
 /* --------------------------- Page Specify Styles -------------------------- */
