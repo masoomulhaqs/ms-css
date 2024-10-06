@@ -50,3 +50,9 @@
     background-size: 100%;
   }
 }
+
+.pointer-events {
+  &-none {
+    pointer-events: none !important;
+  }
+}

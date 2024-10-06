@@ -36,3 +36,20 @@
     margin-bottom: 10px;
   }
 }
+
+@mixin line-loader-bottom {
+  .ms-line-loader {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+    opacity: 0;
+  }
+
+  &.is-loading {
+    .ms-line-loader {
+      opacity: 1;
+    }
+  }
+}

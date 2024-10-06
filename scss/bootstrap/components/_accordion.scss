@@ -15,4 +15,37 @@
       }
     }
   }
+
+  &.ms-accordion-inherit {
+    box-shadow: none;
+    border: 0 !important;
+
+    .accordion-item {
+      border: 0 !important;
+    }
+
+    .accordion-header {
+      border: 0 !important;
+      box-shadow: none;
+    }
+    .accordion-button {
+      font-weight: 700;
+      padding: 0;
+      border: 0 !important;
+      box-shadow: none;
+      &:not(.collapsed) {
+        background-color: var(--ms-white);
+      }
+
+      // &:focus {
+      //   border-bottom: var(--ms-accordion-border-width) solid
+      //     var(--ms-accordion-border-color);
+      // }
+    }
+
+    .accordion-body {
+      border: 0 !important;
+      padding: 1rem 0 0;
+    }
+  }
 }
