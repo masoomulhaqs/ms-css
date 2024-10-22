@@ -23,9 +23,6 @@
     .dropdown-menu {
       --ms-dropdown-min-width: 10rem;
       --ms-dropdown-padding-y: 0.25rem;
-    }
-
-    .dropdown-menu {
       --ms-dropdown-font-size: 14px;
     }
   }
@@ -42,5 +39,15 @@
 fdx-select-theme-dropdown {
   .tooltip-inner {
     white-space: nowrap;
+  }
+}
+
+.ms-dropdown {
+  .ms-dropdown-menu--sm {
+    .dropdown-menu {
+      --ms-dropdown-min-width: 10rem;
+      --ms-dropdown-padding-y: 0.25rem;
+      --ms-dropdown-font-size: 14px;
+    }
   }
 }

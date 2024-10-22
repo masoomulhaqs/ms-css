@@ -1,4 +1,10 @@
 .fdx-input-date-picker {
+  ngb-datepicker.dropdown-menu {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 14px;
+  }
+
   &--cloak {
     input.form-control {
       padding: 0;
@@ -19,4 +25,17 @@
       }
     }
   }
+}
+
+.ngb-dp-day.ngb-dp-today {
+  background: #f1f1f1;
+  border-radius: inherit;
+}
+
+.ngb-dp-navigation-select {
+  gap: 0.25rem;
+}
+
+.ngb-dp-months {
+  justify-content: center;
 }
