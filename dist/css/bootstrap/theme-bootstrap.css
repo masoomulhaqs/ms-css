@@ -21347,6 +21347,11 @@ fdx-icon.fdx-icon--outlined .material-symbols-outlined {
   --ms-badge-color: #c20a0a;
 }
 
+.badge.badge-sm {
+  --ms-badge-padding-x: 0.45em;
+  --ms-badge-padding-y: 0.3em;
+}
+
 button.badge {
   border: 0;
 }
@@ -21723,6 +21728,11 @@ body.modal-open .ng-dropdown-panel {
   font-size: 14px;
 }
 
+.fdx-input-date-picker ngb-datepicker.dropdown-menu {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 14px;
+}
 .fdx-input-date-picker--cloak input.form-control {
   padding: 0;
   border: 0;
@@ -21739,6 +21749,19 @@ body.modal-open .ng-dropdown-panel {
   line-height: 0;
   top: 50% !important;
   transform: translateY(-50%);
+}
+
+.ngb-dp-day.ngb-dp-today {
+  background: #f1f1f1;
+  border-radius: inherit;
+}
+
+.ngb-dp-navigation-select {
+  gap: 0.25rem;
+}
+
+.ngb-dp-months {
+  justify-content: center;
 }
 
 .form-check-input:disabled {
@@ -22104,8 +22127,6 @@ fdx-input-block-editor.ng-invalid.ng-touched .form-label, fdx-input-block-editor
 .dropdown.ms-dropdown--sm .dropdown-menu {
   --ms-dropdown-min-width: 10rem;
   --ms-dropdown-padding-y: 0.25rem;
-}
-.dropdown.ms-dropdown--sm .dropdown-menu {
   --ms-dropdown-font-size: 14px;
 }
 .dropdown .dropdown-item.text-danger, .dropdown .dropdown-item.text-success {
@@ -22114,6 +22135,12 @@ fdx-input-block-editor.ng-invalid.ng-touched .form-label, fdx-input-block-editor
 
 fdx-select-theme-dropdown .tooltip-inner {
   white-space: nowrap;
+}
+
+.ms-dropdown .ms-dropdown-menu--sm .dropdown-menu {
+  --ms-dropdown-min-width: 10rem;
+  --ms-dropdown-padding-y: 0.25rem;
+  --ms-dropdown-font-size: 14px;
 }
 
 table {
@@ -22693,7 +22720,7 @@ table.table-no-borders tbody td {
   --ms-sidebar-layout-nav-active-text-color: #ffffff80;
 }
 .sidebar-layout--collapsed {
-  --ms-sidebar-layout-aside-width: 56px;
+  --ms-sidebar-layout-aside-width: 86px;
   --ms-sidebar-layout-aside-spacing-x: 0.5rem;
 }
 .sidebar-layout--collapsed .nav-pills {
@@ -22798,6 +22825,9 @@ table.table-no-borders tbody td {
 @media (max-width: 991.98px) {
   .sidebar-layout__aside-bottom {
     display: none;
+  }
+  .sidebar-layout__aside-bottom button {
+    width: 100%;
   }
 }
 .sidebar-layout__aside .nav-link:not(.active), .sidebar-layout__aside .btn-icon:not(.active) {

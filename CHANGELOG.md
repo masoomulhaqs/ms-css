@@ -1,3 +1,12 @@
+# [1.6.0](https://github.com/masoomulhaqs/ms-css/compare/v1.5.0...v1.6.0) (2024-10-22)
+
+
+### Features
+
+* added more utility classes for badge, dropdown, date-picker ([6790d69](https://github.com/masoomulhaqs/ms-css/commit/6790d69be7d581c4aed11a5b381e0b72bb1b31e7))
+
+
+
 # [1.5.0](https://github.com/masoomulhaqs/ms-css/compare/v1.4.0...v1.5.0) (2024-10-06)
 
 
