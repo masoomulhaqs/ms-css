@@ -1,5 +1,4 @@
 
-import conventionalGithubReleaser from 'conventional-github-releaser';
 import { Bumper } from 'conventional-recommended-bump';
 import { execa } from 'execa';
 import fs from 'fs';
@@ -111,12 +110,14 @@ async function commitTagPush() {
     await execa('git', ['push', 'origin', 'tag', `v${version}`], { stdio });
 }
 
-function githubRelease(done) {
-    conventionalGithubReleaser(
-        { type: 'oauth', token: process.env.GH_TOKEN, url: 'https://api.github.com/' },
-        { preset },
-        done
-    );
+async function githubRelease(done) {
+    try {
+        await execa('npx', ['semantic-release'], { stdio: 'inherit' });
+        done();
+    } catch (error) {
+        console.error('Semantic release failed:', error);
+        process.exit(1);
+    }
 }
 
 export const docs = series(cleanDocs, copyDocs);

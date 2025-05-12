@@ -27,7 +27,6 @@
   },
   "devDependencies": {
     "conventional-changelog-cli": "^5.0.0",
-    "conventional-github-releaser": "^1.1.7",
     "conventional-recommended-bump": "^10.0.0",
     "execa": "^9.2.0",
     "gulp": "^5.0.0",
@@ -39,6 +38,7 @@
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^2.6.5",
     "sass": "^1.77.4",
+    "semantic-release": "^24.2.3",
     "util": "^0.12.5"
   },
   "engines": {
