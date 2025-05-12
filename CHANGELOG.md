@@ -1,3 +1,12 @@
+## [1.6.1](https://github.com/masoomulhaqs/ms-css/compare/v1.6.0...v1.6.1) (2025-05-12)
+
+
+### Bug Fixes
+
+* resolved audit issues ([a4bab02](https://github.com/masoomulhaqs/ms-css/commit/a4bab02cf8e906c9ead99ff03c9cf2271d24009e))
+
+
+
 # [1.6.0](https://github.com/masoomulhaqs/ms-css/compare/v1.5.0...v1.6.0) (2024-10-22)
 
 

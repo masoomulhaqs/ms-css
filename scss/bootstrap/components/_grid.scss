@@ -20,3 +20,10 @@
     }
   }
 }
+
+.row {
+  &#{&}--slim {
+    --ms-gutter-x: 0.5rem;
+    --ms-gutter-y: 0.5rem;
+  }
+}

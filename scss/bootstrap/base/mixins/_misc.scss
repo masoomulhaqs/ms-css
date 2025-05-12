@@ -7,3 +7,12 @@
     padding-bottom: 3rem;
   }
 }
+
+@mixin ms-invisible-scrollbar() {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

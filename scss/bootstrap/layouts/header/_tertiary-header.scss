@@ -1,0 +1,29 @@
+.tertiary-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0 -32px 24px;
+  background: var(--ms-white);
+  padding: 16px 32px;
+  border-bottom: var(--ms-border-width) var(--ms-border-style)
+    var(--ms-border-color);
+  font-size: 14px;
+
+  @include media-breakpoint-below-desktop() {
+    margin: 0 -12px 12px;
+    padding: 12px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  fdx-select {
+    .ng-select {
+      min-width: 110px;
+    }
+  }
+}

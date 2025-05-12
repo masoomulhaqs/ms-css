@@ -72,3 +72,9 @@
     }
   }
 }
+
+@mixin ms-layout-styles($layout) {
+  body[data-layout="#{layout}"] {
+    @content;
+  }
+}

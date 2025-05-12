@@ -21372,10 +21372,10 @@ button.badge {
   border-left: 3px solid --ms-secondary-bg-subtle;
 }
 
-fdx-message-box .card {
+.ms-message-box .card {
   --ms-card-border-color: var(--ms-border-color);
 }
-fdx-message-box fdx-icon.fdx-message-box-icon .material-symbols-outlined {
+.ms-message-box fdx-icon.fdx-message-box-icon .material-symbols-outlined {
   font-size: 54px;
   color: var(--ms-success);
 }
@@ -22029,6 +22029,28 @@ fdx-input-block-editor.ng-invalid.ng-touched .form-label, fdx-input-block-editor
   height: auto;
 }
 
+.ms-input-quill-editor quill-editor {
+  width: 100%;
+}
+.ms-input-quill-editor .ql-toolbar.ql-snow {
+  border-color: var(--ms-border-color);
+  border-radius: var(--ms-border-radius) var(--ms-border-radius) 0 0;
+}
+.ms-input-quill-editor .ql-container.ql-snow {
+  background-color: #f9f9f9;
+  border-color: var(--ms-border-color);
+  border-radius: 0 0 var(--ms-border-radius) var(--ms-border-radius);
+}
+.ms-input-quill-editor.ng-touched.ng-invalid .ql-toolbar.ql-snow, .ms-input-quill-editor.ng-dirty.ng-invalid .ql-toolbar.ql-snow {
+  border-color: var(--ms-danger);
+}
+.ms-input-quill-editor.ng-touched.ng-invalid .ql-container.ql-snow, .ms-input-quill-editor.ng-dirty.ng-invalid .ql-container.ql-snow {
+  border-color: var(--ms-danger);
+}
+.ms-input-quill-editor.ng-touched.ng-invalid .invalid-feedback, .ms-input-quill-editor.ng-dirty.ng-invalid .invalid-feedback {
+  display: block;
+}
+
 .ms-section__container {
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -22225,6 +22247,13 @@ table.table-no-borders tbody td {
 .ms-table tbody td {
   vertical-align: middle;
 }
+.ms-table tr.is-muted td {
+  background: var(--ms-gray-200);
+  color: var(--ms-gray-600);
+}
+.ms-table tr.is-muted td > a {
+  color: inherit !important;
+}
 .ms-table button.btn-column-action-dropdown-toggle:after {
   display: none;
 }
@@ -22235,7 +22264,8 @@ table.table-no-borders tbody td {
 .ms-table__search {
   position: relative;
 }
-.ms-table__search > i {
+.ms-table__search > i,
+.ms-table__search > fdx-icon {
   position: absolute;
   left: 10px;
   top: 50%;
@@ -22343,6 +22373,12 @@ table.table-no-borders tbody td {
   justify-content: center;
   background: rgba(255, 255, 255, 0.8);
   color: #9ea1a4;
+}
+@media (max-width: 991.98px) {
+  .ms-table.ms-table--filter-flex-column-mobile .ms-table__filters-col--left {
+    flex-direction: column;
+    align-items: start;
+  }
 }
 
 .modal-body .modal-footer {
@@ -22460,6 +22496,11 @@ table.table-no-borders tbody td {
   .container.container--contact-page > .row, .ms-auth-layout__container--two-column .container.container--contact-page > .ms-auth-layout__row {
     --ms-gutter-x: 1.5rem;
   }
+}
+
+.row.row--slim, .ms-auth-layout__container--two-column .row--slim.ms-auth-layout__row {
+  --ms-gutter-x: 0.5rem;
+  --ms-gutter-y: 0.5rem;
 }
 
 .fdx-data-field--user {
@@ -22677,6 +22718,32 @@ table.table-no-borders tbody td {
     transform: none !important;
     border-radius: 0 !important;
   }
+}
+
+.tertiary-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0 -32px 24px;
+  background: var(--ms-white);
+  padding: 16px 32px;
+  border-bottom: var(--ms-border-width) var(--ms-border-style) var(--ms-border-color);
+  font-size: 14px;
+}
+@media (max-width: 991.98px) {
+  .tertiary-header {
+    margin: 0 -12px 12px;
+    padding: 12px;
+  }
+}
+.tertiary-header__content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.tertiary-header fdx-select .ng-select {
+  min-width: 110px;
 }
 
 .ms-main-footer {
