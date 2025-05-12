@@ -110,13 +110,12 @@ async function commitTagPush() {
     await execa('git', ['push', 'origin', 'tag', `v${version}`], { stdio });
 }
 
-async function githubRelease(done) {
+async function githubRelease() {
     try {
         await execa('npx', ['semantic-release'], { stdio: 'inherit' });
-        done();
     } catch (error) {
         console.error('Semantic release failed:', error);
-        process.exit(1);
+        throw err;
     }
 }
 
