@@ -66,6 +66,10 @@ table {
   padding: 2rem;
   @extend .shadow;
 
+  @include ms-color-mode("dark") {
+    background: var(--#{$prefix}body-bg);
+  }
+
   &__header {
     margin-bottom: 1rem;
     display: flex;

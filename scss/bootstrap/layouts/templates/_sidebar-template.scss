@@ -10,10 +10,19 @@
   --ms-sidebar-layout-nav-active-bg-color: #f6f6f6;
   --ms-sidebar-layout-nav-active-text-color: #000;
 
-  @include color-mode(dark) {
-    --ms-sidebar-layout-bg-color: #161a23;
-    --ms-sidebar-layout-bg-active-color: #2d2f39;
-    --ms-sidebar-layout-text-color: #67696c;
+  @include ms-color-mode(dark) {
+    // --ms-sidebar-layout-bg-color: #161a23;
+    // --ms-sidebar-layout-bg-active-color: #2d2f39;
+    // --ms-sidebar-layout-text-color: #67696c;
+    // --ms-sidebar-layout-text-active-color: #ffffff80;
+
+    // --ms-sidebar-layout-nav-hover-text-color: #ffffff80;
+    // --ms-sidebar-layout-nav-active-bg-color: #2d2f39;
+    // --ms-sidebar-layout-nav-active-text-color: #ffffff80;
+
+    --ms-sidebar-layout-bg-color: #252526;
+    --ms-sidebar-layout-bg-active-color: #53595d80;
+    --ms-sidebar-layout-text-color: #93a1a1;
     --ms-sidebar-layout-text-active-color: #ffffff80;
 
     --ms-sidebar-layout-nav-hover-text-color: #ffffff80;
@@ -52,7 +61,7 @@
       background: var(--ms-sidebar-layout-bg-active-color);
       color: var(--ms-sidebar-layout-text-active-color);
 
-      @include color-mode(dark) {
+      @include ms-color-mode(dark) {
         border: 0;
       }
 
@@ -175,7 +184,7 @@
     --ms-nav-link-color: var(--ms-sidebar-layout-text-color);
     --ms-nav-link-hover-color: var(--ms-sidebar-layout-nav-hover-text-color);
 
-    @include color-mode(dark) {
+    @include ms-color-mode(dark) {
       --ms-nav-pills-link-active-color: var(
         --ms-sidebar-layout-nav-active-text-color
       );

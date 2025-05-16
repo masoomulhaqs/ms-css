@@ -1,4 +1,10 @@
 .site-header {
+  background-color: var(--ms-white);
+
+  @include ms-color-mode("dark") {
+    --ms-white: #252526;
+  }
+
   @include media-breakpoint-below-desktop() {
     padding-inline: 0 !important;
   }

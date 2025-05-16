@@ -16,15 +16,19 @@
     font-size: 12px;
     letter-spacing: 1px;
     font-weight: 500;
-    color: #666;
+    color: var(--#{$prefix}input-label-color, #666);
   }
 
   &-control,
   &-select {
-    background-color: #f9f9f9;
+    background-color: var(--#{$prefix}input-bg);
 
     &:focus {
-      background-color: #f1f1f1;
+      background-color: var(--#{$prefix}input-focus-bg);
+    }
+
+    &:disabled {
+      background-color: var(--#{$prefix}input-disabled-bg);
     }
 
     &:invalid {
@@ -116,14 +120,14 @@
       opacity: 1;
       color: var(--ms-secondary);
       border-color: var(--ms-secondary-border-subtle);
-      background-color: #dadee4;
+      background-color: var(--#{$prefix}input-disabled-bg, #dadee4);
     }
 
     .ng-select.ng-select-disabled {
       > .ng-select-container {
         color: var(--ms-secondary);
         border-color: var(--ms-secondary-border-subtle);
-        background-color: #dadee4;
+        background-color: var(--#{$prefix}input-disabled-bg, #dadee4);
       }
     }
   }

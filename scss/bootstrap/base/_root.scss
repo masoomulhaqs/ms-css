@@ -1,131 +1,166 @@
 :root {
   // Common
-  --ms-font-family-roboto: #{$font-family-base};
-  --ms-font-family-roboto-slab: #{$font-family-heading};
-  --ms-font-family-body: #{$font-family-base};
-  --ms-font-family-heading: #{$font-family-heading};
-  --ms-color-tertiary: #{$tertiary};
+  --#{$prefix}font-family-roboto: #{$font-family-base};
+  --#{$prefix}font-family-roboto-slab: #{$font-family-heading};
+  --#{$prefix}font-family-body: #{$font-family-base};
+  --#{$prefix}font-family-heading: #{$font-family-heading};
+  --#{$prefix}color-tertiary: #{$tertiary};
 
   // Shadows
-  --ms-box-shadow: #{$box-shadow-sm};
-  --ms-box-shadow-lg: #{$box-shadow-lg};
-  --ms-box-shadow-inset: #{$box-shadow-inset};
+  --#{$prefix}box-shadow: #{$box-shadow-sm};
+  --#{$prefix}box-shadow-lg: #{$box-shadow-lg};
+  --#{$prefix}box-shadow-inset: #{$box-shadow-inset};
 
   // Sizes
-  // --ms-font-size-xxl: #{rem(78)};
-  // --ms-font-size-xl: #{rem(68)};
-  // --ms-font-size-lg: #{rem(40)};
-  --ms-font-size-xxl: #{rem(60)};
-  --ms-font-size-xl: #{rem(48)};
-  --ms-font-size-lg: #{rem(36)};
-  --ms-font-size-md: #{rem(20)};
-  --ms-font-size-default: #{rem(16)};
-  --ms-font-size-sm: #{rem(14)};
-  --ms-font-size-12: #{rem(12)};
-  --ms-font-size-10: #{rem(10)};
+  // --#{$prefix}font-size-xxl: #{rem(78)};
+  // --#{$prefix}font-size-xl: #{rem(68)};
+  // --#{$prefix}font-size-lg: #{rem(40)};
+  --#{$prefix}font-size-xxl: #{rem(60)};
+  --#{$prefix}font-size-xl: #{rem(48)};
+  --#{$prefix}font-size-lg: #{rem(36)};
+  --#{$prefix}font-size-md: #{rem(20)};
+  --#{$prefix}font-size-default: #{rem(16)};
+  --#{$prefix}font-size-sm: #{rem(14)};
+  --#{$prefix}font-size-12: #{rem(12)};
+  --#{$prefix}font-size-10: #{rem(10)};
 
   // Body
-  --ms-body-standalone-bg: #e7ecf3;
-  --ms-body-color: #{$dark};
-  --ms-body-font-family: var(--ms-font-family-body);
+  --#{$prefix}body-standalone-bg: #e7ecf3;
+  --#{$prefix}body-color: #{$dark};
+  --#{$prefix}body-font-family: var(--#{$prefix}font-family-body);
 
   // Header
-  --ms-header-bg: #{$light};
-  // --ms-header-height: -72px;
-  --ms-header-link-font-weight: 700;
-  --ms-header-link-letter-spacing: 0.115em;
-  --ms-header-link-color: var(--ms-dark);
-  --ms-header-mobile-link-padding-y: 0.85rem;
-  --ms-header-mobile-link-padding-x: 1.5rem;
-  --ms-header-mobile-hamburger-width: 65px;
-  --ms-header-mobile-icons-gap: 1rem;
-  --ms-header-mobile-offcanvas-bg: #fff;
+  --#{$prefix}header-bg: #{$light};
+  // --#{$prefix}header-height: -72px;
+  --#{$prefix}header-link-font-weight: 700;
+  --#{$prefix}header-link-letter-spacing: 0.115em;
+  --#{$prefix}header-link-color: var(--#{$prefix}dark);
+  --#{$prefix}header-mobile-link-padding-y: 0.85rem;
+  --#{$prefix}header-mobile-link-padding-x: 1.5rem;
+  --#{$prefix}header-mobile-hamburger-width: 65px;
+  --#{$prefix}header-mobile-icons-gap: 1rem;
+  --#{$prefix}header-mobile-offcanvas-bg: #fff;
 
   // Footer
-  --ms-footer-bg: var(--ms-dark);
-  --ms-footer-color: var(--ms-light);
-  --ms-footer-link-font-weight: 700;
-  --ms-footer-link-color: #fff;
-  --ms-footer-link-letter-spacing: 0.115em;
+  --#{$prefix}footer-bg: var(--#{$prefix}dark);
+  --#{$prefix}footer-color: var(--#{$prefix}light);
+  --#{$prefix}footer-link-font-weight: 700;
+  --#{$prefix}footer-link-color: #fff;
+  --#{$prefix}footer-link-letter-spacing: 0.115em;
 
   // Icons
-  --ms-icon-font-size: #{$icon-font-size};
+  --#{$prefix}icon-font-size: #{$icon-font-size};
 
   // Buttons
-  --ms-btn-letter-spacing: 0.05em;
-  --ms-btn-icon-font-size: #{$btn-icon-font-size};
-  --ms-btn-icon-size: 30px;
-  --ms-btn-icon-border-radius: 30px;
+  --#{$prefix}btn-letter-spacing: 0.05em;
+  --#{$prefix}btn-icon-font-size: #{$btn-icon-font-size};
+  --#{$prefix}btn-icon-size: 30px;
+  --#{$prefix}btn-icon-border-radius: 30px;
 
-  --ms-btn-group-gap: 10px;
-  --ms-btn-group-icon-font-size: 16px;
+  --#{$prefix}btn-group-gap: 10px;
+  --#{$prefix}btn-group-icon-font-size: 16px;
 
   // Tables
-  --ms-table-font-size: #{$table-font-size};
-  --ms-table-icon-font-size: 16px;
+  --#{$prefix}table-font-size: #{$table-font-size};
+  --#{$prefix}table-icon-font-size: 16px;
 
-  --ms-table-filters-font-size: 12px;
-  --ms-table-filters-color: var(--ms-gray);
+  --#{$prefix}table-filters-font-size: 12px;
+  --#{$prefix}table-filters-color: var(--#{$prefix}gray);
 
-  --ms-table-footer-font-size: 12px;
-  --ms-table-footer-gap: 1rem;
+  --#{$prefix}table-footer-font-size: 12px;
+  --#{$prefix}table-footer-gap: 1rem;
 
   // Block Editor
-  --ms-input-block-editor-max-width: 650px;
+  --#{$prefix}input-block-editor-max-width: 650px;
 
   // Overlays
-  --ms-overlay-bg-default: #{$overlay-bg-default};
+  --#{$prefix}overlay-bg-default: #{$overlay-bg-default};
 
   //  Hero Banner
-  --ms-hero-banner-height: 480px;
-  --ms-hero-banner-bg: #{$light};
-  --ms-hero-banner-color: #{$dark};
+  --#{$prefix}hero-banner-height: 480px;
+  --#{$prefix}hero-banner-bg: #{$light};
+  --#{$prefix}hero-banner-color: #{$dark};
 
   // Infograph
-  --ms-infograph-image-border-radius: 0 100px 0 0;
+  --#{$prefix}infograph-image-border-radius: 0 100px 0 0;
 
   // Cards
-  --ms-card-collection-height: 410px;
+  --#{$prefix}card-collection-height: 410px;
 
   // Ratings
-  --ms-ratings-theme-color: var(--ms-warning);
+  --#{$prefix}ratings-theme-color: var(--#{$prefix}warning);
 
   // Section
-  --ms-section-pre-text-font-size: 0.8rem;
-  --ms-section-pre-text-font-weight: 500;
-  --ms-section-pre-text-color: var(--ms-success);
-  --ms-section-title-font-size: var(--ms-font-size-xl);
-  --ms-section-desc-font-size: var(--ms-font-size-md);
-  --ms-section-header-margin-bottom: 4rem;
-  --ms-section-footer-text-align: center;
-  --ms-section-footer-margin-top: 1.5rem;
+  --#{$prefix}section-pre-text-font-size: 0.8rem;
+  --#{$prefix}section-pre-text-font-weight: 500;
+  --#{$prefix}section-pre-text-color: var(--#{$prefix}success);
+  --#{$prefix}section-title-font-size: var(--#{$prefix}font-size-xl);
+  --#{$prefix}section-desc-font-size: var(--#{$prefix}font-size-md);
+  --#{$prefix}section-header-margin-bottom: 4rem;
+  --#{$prefix}section-footer-text-align: center;
+  --#{$prefix}section-footer-margin-top: 1.5rem;
 
   // Products
-  --ms-product-card-image-width: 100%;
-  --ms-product-card-image-height: 340px;
-  --ms-product-card-rating-spacing-bottom: 0.5rem;
-  --ms-product-card-price-spacing: 10px;
-  --ms-product-card-price-actual-color: var(--ms-gray-500);
-  --ms-product-card-price-discounted-font-weight: 700;
+  --#{$prefix}product-card-image-width: 100%;
+  --#{$prefix}product-card-image-height: 340px;
+  --#{$prefix}product-card-rating-spacing-bottom: 0.5rem;
+  --#{$prefix}product-card-price-spacing: 10px;
+  --#{$prefix}product-card-price-actual-color: var(--#{$prefix}gray-500);
+  --#{$prefix}product-card-price-discounted-font-weight: 700;
 
   // Testimonial
-  --ms-card-testimonial-min-height: 230px;
+  --#{$prefix}card-testimonial-min-height: 230px;
 
   // Spinners
-  --ms-spinner-radius: #{$spinner-radius};
-  --ms-spinner-border-width: #{$spinner-border-width};
-  --ms-spinner-color: #{$spinner-color};
-  --ms-spinner-alt-color: #{$spinner-alt-color};
+  --#{$prefix}spinner-radius: #{$spinner-radius};
+  --#{$prefix}spinner-border-width: #{$spinner-border-width};
+  --#{$prefix}spinner-color: #{$spinner-color};
+  --#{$prefix}spinner-alt-color: #{$spinner-alt-color};
 
   // Skeleton Animation
-  --ms-skeleton-bg: #{$skeleton-bg}; /* Background color of the skeleton */
-  --ms-skeleton-animation: #{$skeleton-animation};
-  --ms-skeleton-duration: #{$skeleton-duration}; /* Duration of the animation */
+  --#{$prefix}skeleton-bg: #{$skeleton-bg}; /* Background color of the skeleton */
+  --#{$prefix}skeleton-animation: #{$skeleton-animation};
+  --#{$prefix}skeleton-duration: #{$skeleton-duration}; /* Duration of the animation */
 
   // Forms
-  --ms-select-chip-fs: 0.9em;
-  --ms-select-chip-height: 30px;
-  --ms-select-chip-color: #333;
-  --ms-select-chip-border-color: #000;
-  --ms-select-chip-disabled-bg-color: #c3c3c3;
+  --#{$prefix}select-chip-fs: 0.9em;
+  --#{$prefix}select-chip-height: 30px;
+  --#{$prefix}select-chip-color: #333;
+  --#{$prefix}select-chip-border-color: #000;
+  --#{$prefix}select-chip-disabled-bg-color: #c3c3c3;
+
+  --#{$prefix}input-bg: #{$input-bg};
+  --#{$prefix}input-focus-bg: #{$input-focus-bg};
+}
+
+@include color-mode("dark", true) {
+  @each $key, $value in $grays-dark {
+    --#{$prefix}gray-#{$key}-dark: #{$value};
+  }
+
+  --#{$prefix}body-color: #{$body-color-dark};
+  --#{$prefix}body-color-rgb: #{to-rgb($body-color-dark)};
+  --#{$prefix}body-bg: #{$body-bg-dark};
+  --#{$prefix}body-standalone-bg: #{$body-standalone-bg-dark};
+  --#{$prefix}body-bg-rgb: #{to-rgb($body-bg-dark)};
+
+  --#{$prefix}modal-bg: #{$body-standalone-bg-dark};
+
+  --#{$prefix}emphasis-color: #{$body-emphasis-color-dark};
+  --#{$prefix}emphasis-color-rgb: #{to-rgb($body-emphasis-color-dark)};
+
+  --#{$prefix}secondary-color: #{$body-secondary-color-dark};
+  --#{$prefix}secondary-color-rgb: #{to-rgb($body-secondary-color-dark)};
+  --#{$prefix}secondary-bg: #{$body-secondary-bg-dark};
+  --#{$prefix}secondary-bg-rgb: #{to-rgb($body-secondary-bg-dark)};
+
+  --#{$prefix}tertiary-color: #{$body-tertiary-color-dark};
+  --#{$prefix}tertiary-color-rgb: #{to-rgb($body-tertiary-color-dark)};
+  --#{$prefix}tertiary-bg: #{$body-tertiary-bg-dark};
+  --#{$prefix}tertiary-bg-rgb: #{to-rgb($body-tertiary-bg-dark)};
+
+  --#{$prefix}input-bg: transparent;
+  --#{$prefix}input-focus-bg: #{$input-focus-bg-dark};
+  --#{$prefix}input-disabled-bg: #{$input-disabled-bg-dark};
+  --#{$prefix}input-label-color: #93a1a1;
 }

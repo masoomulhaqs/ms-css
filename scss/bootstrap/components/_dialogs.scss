@@ -1,4 +1,8 @@
 .modal {
+  @include ms-color-mode(dark) {
+    --ms-modal-bg: var(--#{$prefix}body-standalone-bg);
+  }
+
   &-body {
     .modal-footer {
       margin-left: -15px;

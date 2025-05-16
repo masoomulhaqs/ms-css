@@ -1,3 +1,15 @@
+@mixin ms-color-mode($mode: light, $root: false) {
+  @if $root == true {
+    :root {
+      @content;
+    }
+  } @else {
+    [data-bs-theme="#{$mode}"] & {
+      @content;
+    }
+  }
+}
+
 @mixin section-spacing-y() {
   padding-top: 5rem;
   padding-bottom: 5rem;

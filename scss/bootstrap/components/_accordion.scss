@@ -5,8 +5,9 @@
   &.ms-accordion-white {
     .accordion-button {
       font-weight: 700;
+
       &:not(.collapsed) {
-        background-color: var(--ms-white);
+        background-color: var(--#{$prefix}body-bg);
       }
 
       &:focus {
