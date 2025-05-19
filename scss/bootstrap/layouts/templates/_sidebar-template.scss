@@ -57,6 +57,13 @@
     overflow-y: auto;
     color: var(--ms-sidebar-layout-text-color);
 
+    @include media-breakpoint-desktop-and-above() {
+      @include ms-color-mode(dark) {
+        border-right: var(--ms-border-width) var(--ms-border-style)
+          var(--ms-border-color) !important;
+      }
+    }
+
     input[type="search"] {
       background: var(--ms-sidebar-layout-bg-active-color);
       color: var(--ms-sidebar-layout-text-active-color);

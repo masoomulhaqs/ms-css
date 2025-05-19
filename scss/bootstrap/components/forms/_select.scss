@@ -1,6 +1,19 @@
 .ng-select {
-  .ng-select-container .ng-value-container .ng-input > input {
-    height: 100%;
+  .ng-select-container {
+    background-color: var(--ms-select-bg-color);
+    border-color: var(--ms-select-border-color);
+    color: var(--#{$prefix}body-color);
+
+    .ng-value-container .ng-input > input {
+      height: 100%;
+    }
+  }
+
+  &#{&}-opened {
+    > .ng-select-container {
+      background-color: var(--ms-select-opened-bg-color);
+      border-color: var(--ms-select-opened-border-color);
+    }
   }
 
   .ng-arrow-wrapper {

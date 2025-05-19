@@ -1,0 +1,51 @@
+.ms-input-quill-editor {
+  quill-editor {
+    width: 100%;
+  }
+
+  .ql-editor.ql-blank {
+    &::before {
+      color: var(--#{$prefix}secondary-color);
+      font-style: normal;
+      font-size: $input-font-size;
+    }
+  }
+
+  .ql-toolbar {
+    &.ql-snow {
+      border-color: var(--ms-border-color);
+      border-radius: var(--ms-border-radius) var(--ms-border-radius) 0 0;
+    }
+  }
+
+  .ql-container {
+    min-height: 50px;
+
+    &.ql-snow {
+      background-color: var(--ms-input-bg, #{$input-bg});
+      border-color: var(--ms-border-color);
+      border-radius: 0 0 var(--ms-border-radius) var(--ms-border-radius);
+    }
+  }
+
+  &.ng-touched,
+  &.ng-dirty {
+    &.ng-invalid {
+      .ql-toolbar {
+        &.ql-snow {
+          border-color: var(--ms-danger);
+        }
+      }
+
+      .ql-container {
+        &.ql-snow {
+          border-color: var(--ms-danger);
+        }
+      }
+
+      .invalid-feedback {
+        display: block;
+      }
+    }
+  }
+}

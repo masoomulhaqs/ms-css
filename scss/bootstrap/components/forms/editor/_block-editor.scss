@@ -1,6 +1,6 @@
 .ms-input-block-editor {
   .codex-editor {
-    background-color: #fff;
+    background-color: var(--#{$prefix}block-editor-bg);
   }
 
   &:has(.ce-toolbar__actions--opened, .ce-toolbar--opened) {
@@ -80,46 +80,6 @@
       .ce-popover-item__icon svg {
         width: 12px;
         height: auto;
-      }
-    }
-  }
-}
-
-.ms-input-quill-editor {
-  quill-editor {
-    width: 100%;
-  }
-  .ql-toolbar {
-    &.ql-snow {
-      border-color: var(--ms-border-color);
-      border-radius: var(--ms-border-radius) var(--ms-border-radius) 0 0;
-    }
-  }
-
-  .ql-container {
-    &.ql-snow {
-      background-color: #f9f9f9;
-      border-color: var(--ms-border-color);
-      border-radius: 0 0 var(--ms-border-radius) var(--ms-border-radius);
-    }
-  }
-
-  &.ng-touched,
-  &.ng-dirty {
-    &.ng-invalid {
-      .ql-toolbar {
-        &.ql-snow {
-          border-color: var(--ms-danger);
-        }
-      }
-
-      .ql-container {
-        &.ql-snow {
-          border-color: var(--ms-danger);
-        }
-      }
-      .invalid-feedback {
-        display: block;
       }
     }
   }

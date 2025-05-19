@@ -123,6 +123,15 @@
   --#{$prefix}skeleton-duration: #{$skeleton-duration}; /* Duration of the animation */
 
   // Forms
+  --#{$prefix}select-bg-color: #{$input-bg};
+  --#{$prefix}select-border-color: #dee2e6;
+  --#{$prefix}select-opened-bg-color: #{$input-bg};
+  --#{$prefix}select-opened-border-color: rgb(
+      192.9827586207,
+      200.5,
+      208.0172413793
+    )
+    #dee2e6 rgb(236.5086206897, 238.75, 240.9913793103);
   --#{$prefix}select-chip-fs: 0.9em;
   --#{$prefix}select-chip-height: 30px;
   --#{$prefix}select-chip-color: #333;
@@ -131,6 +140,8 @@
 
   --#{$prefix}input-bg: #{$input-bg};
   --#{$prefix}input-focus-bg: #{$input-focus-bg};
+
+  --#{$prefix}block-editor-bg: #fff;
 }
 
 @include color-mode("dark", true) {
@@ -159,8 +170,22 @@
   --#{$prefix}tertiary-bg: #{$body-tertiary-bg-dark};
   --#{$prefix}tertiary-bg-rgb: #{to-rgb($body-tertiary-bg-dark)};
 
+  // Forms
+
+  --#{$prefix}select-bg-color: transparent;
+  --#{$prefix}select-border-color: var(--ms-border-color);
+  --#{$prefix}select-opened-bg-color: var(--#{$prefix}select-bg-color);
+  --#{$prefix}select-opened-border-color: rgb(
+      192.9827586207,
+      200.5,
+      208.0172413793
+    )
+    #dee2e6 rgb(236.5086206897, 238.75, 240.9913793103);
+
   --#{$prefix}input-bg: transparent;
   --#{$prefix}input-focus-bg: #{$input-focus-bg-dark};
   --#{$prefix}input-disabled-bg: #{$input-disabled-bg-dark};
   --#{$prefix}input-label-color: #93a1a1;
+
+  --#{$prefix}block-editor-bg: var(--#{$prefix}input-bg);
 }
