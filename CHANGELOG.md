@@ -1,3 +1,12 @@
+# [1.7.0](https://github.com/masoomulhaqs/ms-css/compare/v1.6.1...v1.7.0) (2025-05-19)
+
+
+### Features
+
+* init dark theme ([c97e616](https://github.com/masoomulhaqs/ms-css/commit/c97e6166371bd0c2011165b0294e686f4098471b))
+
+
+
 ## [1.6.1](https://github.com/masoomulhaqs/ms-css/compare/v1.6.0...v1.6.1) (2025-05-12)
 
 
