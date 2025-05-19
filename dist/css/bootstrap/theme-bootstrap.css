@@ -12170,6 +12170,15 @@ textarea.form-control-lg {
   --ms-skeleton-bg: #fff; /* Background color of the skeleton */
   --ms-skeleton-animation: linear-gradient(90deg, #f6f6f6 25%, #fff 50%, #f6f6f6 75%);
   --ms-skeleton-duration: 1.5s; /* Duration of the animation */
+  --ms-select-bg-color: #f9f9f9;
+  --ms-select-border-color: #dee2e6;
+  --ms-select-opened-bg-color: #f9f9f9;
+  --ms-select-opened-border-color: rgb(
+      192.9827586207,
+      200.5,
+      208.0172413793
+    )
+    #dee2e6 rgb(236.5086206897, 238.75, 240.9913793103);
   --ms-select-chip-fs: 0.9em;
   --ms-select-chip-height: 30px;
   --ms-select-chip-color: #333;
@@ -12177,6 +12186,7 @@ textarea.form-control-lg {
   --ms-select-chip-disabled-bg-color: #c3c3c3;
   --ms-input-bg: #f9f9f9;
   --ms-input-focus-bg: #f1f1f1;
+  --ms-block-editor-bg: #fff;
 }
 
 [data-bs-theme=dark] {
@@ -12205,10 +12215,20 @@ textarea.form-control-lg {
   --ms-tertiary-color-rgb: 212, 212, 212;
   --ms-tertiary-bg: #2b3035;
   --ms-tertiary-bg-rgb: 43, 48, 53;
+  --ms-select-bg-color: transparent;
+  --ms-select-border-color: var(--ms-border-color);
+  --ms-select-opened-bg-color: var(--ms-select-bg-color);
+  --ms-select-opened-border-color: rgb(
+      192.9827586207,
+      200.5,
+      208.0172413793
+    )
+    #dee2e6 rgb(236.5086206897, 238.75, 240.9913793103);
   --ms-input-bg: transparent;
   --ms-input-focus-bg: #363636;
   --ms-input-disabled-bg: #242424;
   --ms-input-label-color: #93a1a1;
+  --ms-block-editor-bg: var(--ms-input-bg);
 }
 
 body {
@@ -21518,8 +21538,17 @@ button.badge {
   width: 100%;
 }
 
+.ng-select .ng-select-container {
+  background-color: var(--ms-select-bg-color);
+  border-color: var(--ms-select-border-color);
+  color: var(--ms-body-color);
+}
 .ng-select .ng-select-container .ng-value-container .ng-input > input {
   height: 100%;
+}
+.ng-select.ng-select-opened > .ng-select-container {
+  background-color: var(--ms-select-opened-bg-color);
+  border-color: var(--ms-select-opened-border-color);
 }
 .ng-select .ng-arrow-wrapper {
   padding-right: 12px;
@@ -22001,7 +22030,7 @@ fdx-input-block-editor.ng-invalid.ng-touched .form-label, fdx-input-block-editor
 }
 
 .ms-input-block-editor .codex-editor {
-  background-color: #fff;
+  background-color: var(--ms-block-editor-bg);
 }
 .ms-input-block-editor:has(.ce-toolbar__actions--opened, .ce-toolbar--opened) {
   position: relative;
@@ -22069,12 +22098,20 @@ fdx-input-block-editor.ng-invalid.ng-touched .form-label, fdx-input-block-editor
 .ms-input-quill-editor quill-editor {
   width: 100%;
 }
+.ms-input-quill-editor .ql-editor.ql-blank::before {
+  color: var(--ms-secondary-color);
+  font-style: normal;
+  font-size: 1rem;
+}
 .ms-input-quill-editor .ql-toolbar.ql-snow {
   border-color: var(--ms-border-color);
   border-radius: var(--ms-border-radius) var(--ms-border-radius) 0 0;
 }
+.ms-input-quill-editor .ql-container {
+  min-height: 50px;
+}
 .ms-input-quill-editor .ql-container.ql-snow {
-  background-color: #f9f9f9;
+  background-color: var(--ms-input-bg, #f9f9f9);
   border-color: var(--ms-border-color);
   border-radius: 0 0 var(--ms-border-radius) var(--ms-border-radius);
 }
@@ -22903,6 +22940,11 @@ table.table-no-borders tbody td {
   height: var(100vh-var(--ms-site-header-height, 0));
   overflow-y: auto;
   color: var(--ms-sidebar-layout-text-color);
+}
+@media (min-width: 992px) {
+  [data-bs-theme=dark] .sidebar-layout__aside {
+    border-right: var(--ms-border-width) var(--ms-border-style) var(--ms-border-color) !important;
+  }
 }
 .sidebar-layout__aside input[type=search] {
   background: var(--ms-sidebar-layout-bg-active-color);

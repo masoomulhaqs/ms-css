@@ -1,3 +1,12 @@
+# [1.8.0](https://github.com/masoomulhaqs/ms-css/compare/v1.7.0...v1.8.0) (2025-05-19)
+
+
+### Features
+
+* form control changes on dark theme ([f9b6686](https://github.com/masoomulhaqs/ms-css/commit/f9b668613309c000b8cd9ba29ebf6849947e47f3))
+
+
+
 # [1.7.0](https://github.com/masoomulhaqs/ms-css/compare/v1.6.1...v1.7.0) (2025-05-19)
 
 
