@@ -1,3 +1,12 @@
+# [1.9.0](https://github.com/masoomulhaqs/ms-css/compare/v1.8.0...v1.9.0) (2025-05-19)
+
+
+### Features
+
+* dark theme utility classed added ([6260a3a](https://github.com/masoomulhaqs/ms-css/commit/6260a3abace8ab4ae0439342c03643aee40109a3))
+
+
+
 # [1.8.0](https://github.com/masoomulhaqs/ms-css/compare/v1.7.0...v1.8.0) (2025-05-19)
 
 

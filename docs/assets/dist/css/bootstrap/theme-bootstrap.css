@@ -12099,6 +12099,12 @@ textarea.form-control-lg {
   --ms-font-family-body: var(--ms-font-sans-serif);
   --ms-font-family-heading: system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Noto Sans, Liberation Sans, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --ms-color-tertiary: #fedaa8;
+  --ms-bg-color-1: #ffffff;
+  --ms-bg-color-2: #d9d9d9;
+  --ms-bg-color-3: #c6c6c6;
+  --ms-bg-color-4: #b3b3b3;
+  --ms-bg-color-5: #a1a1a1;
+  --ms-bg-color-6: #909090;
   --ms-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
   --ms-box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
   --ms-box-shadow-inset: inset 0 1px 2px rgba(0, 0, 0, 0.075);
@@ -12113,7 +12119,7 @@ textarea.form-control-lg {
   --ms-body-standalone-bg: #e7ecf3;
   --ms-body-color: #212529;
   --ms-body-font-family: var(--ms-font-family-body);
-  --ms-header-bg: #f8f9fa;
+  --ms-header-bg: #fff;
   --ms-header-link-font-weight: 700;
   --ms-header-link-letter-spacing: 0.115em;
   --ms-header-link-color: var(--ms-dark);
@@ -12187,9 +12193,25 @@ textarea.form-control-lg {
   --ms-input-bg: #f9f9f9;
   --ms-input-focus-bg: #f1f1f1;
   --ms-block-editor-bg: #fff;
+  --ms-sidebar-layout-aside-width: 300px;
+  --ms-sidebar-layout-aside-spacing-x: 1.5rem;
+  --ms-sidebar-layout-aside-spacing-y: 1.5rem;
+  --ms-sidebar-layout-bg-color: #fff;
+  --ms-sidebar-layout-bg-active-color: #f6f6f6;
+  --ms-sidebar-layout-text-color: #757575;
+  --ms-sidebar-layout-text-active-color: #000;
+  --ms-sidebar-layout-nav-hover-text-color: #000;
+  --ms-sidebar-layout-nav-active-bg-color: #f6f6f6;
+  --ms-sidebar-layout-nav-active-text-color: #000;
 }
 
 [data-bs-theme=dark] {
+  --ms-bg-color-1: #1f1f1f;
+  --ms-bg-color-2: #252526;
+  --ms-bg-color-3: #383a49;
+  --ms-bg-color-4: #484b59;
+  --ms-bg-color-5: #6b677f;
+  --ms-bg-color-6: #939393;
   --ms-gray-100-dark: #161b22;
   --ms-gray-200-dark: #1c2128;
   --ms-gray-300-dark: #22272e;
@@ -12199,6 +12221,7 @@ textarea.form-control-lg {
   --ms-gray-700-dark: #586069;
   --ms-gray-800-dark: #768390;
   --ms-gray-900-dark: #adbac7;
+  --ms-header-bg: var(--ms-bg-color-2);
   --ms-body-color: #d4d4d4;
   --ms-body-color-rgb: 212, 212, 212;
   --ms-body-bg: #383a49;
@@ -12229,6 +12252,13 @@ textarea.form-control-lg {
   --ms-input-disabled-bg: #242424;
   --ms-input-label-color: #93a1a1;
   --ms-block-editor-bg: var(--ms-input-bg);
+  --ms-sidebar-layout-bg-color: var(--ms-bg-color-2);
+  --ms-sidebar-layout-bg-active-color: #53595d80;
+  --ms-sidebar-layout-text-color: #93a1a1;
+  --ms-sidebar-layout-text-active-color: #ffffff80;
+  --ms-sidebar-layout-nav-hover-text-color: #ffffff80;
+  --ms-sidebar-layout-nav-active-bg-color: #2d2f39;
+  --ms-sidebar-layout-nav-active-text-color: #ffffff80;
 }
 
 body {
@@ -22321,11 +22351,15 @@ table.table-no-borders tbody td {
   border-bottom: 0;
   white-space: nowrap;
 }
+.ms-table thead.table-primary {
+  --ms-table-bg: var(--ms-bg-color-5);
+  --ms-table-color: var(--ms-body-color);
+}
 .ms-table tbody td {
   vertical-align: middle;
 }
 .ms-table tr.is-muted td {
-  background: var(--ms-gray-200);
+  background: var(--ms-bg-color-4);
   color: var(--ms-gray-600);
 }
 .ms-table tr.is-muted td > a {
@@ -22748,10 +22782,7 @@ table.table-no-borders tbody td {
 }
 
 .site-header {
-  background-color: var(--ms-white);
-}
-[data-bs-theme=dark] .site-header {
-  --ms-white: #252526;
+  background-color: var(--ms-header-bg);
 }
 @media (max-width: 991.98px) {
   .site-header {
@@ -22851,27 +22882,6 @@ table.table-no-borders tbody td {
 /* -------------------------------------------------------------------------- */
 /*                                Page Layouts                                */
 /* -------------------------------------------------------------------------- */
-.sidebar-layout {
-  --ms-sidebar-layout-aside-width: 300px;
-  --ms-sidebar-layout-aside-spacing-x: 1.5rem;
-  --ms-sidebar-layout-aside-spacing-y: 1.5rem;
-  --ms-sidebar-layout-bg-color: #fff;
-  --ms-sidebar-layout-bg-active-color: #f6f6f6;
-  --ms-sidebar-layout-text-color: #757575;
-  --ms-sidebar-layout-text-active-color: #000;
-  --ms-sidebar-layout-nav-hover-text-color: #000;
-  --ms-sidebar-layout-nav-active-bg-color: #f6f6f6;
-  --ms-sidebar-layout-nav-active-text-color: #000;
-}
-[data-bs-theme=dark] .sidebar-layout {
-  --ms-sidebar-layout-bg-color: #252526;
-  --ms-sidebar-layout-bg-active-color: #53595d80;
-  --ms-sidebar-layout-text-color: #93a1a1;
-  --ms-sidebar-layout-text-active-color: #ffffff80;
-  --ms-sidebar-layout-nav-hover-text-color: #ffffff80;
-  --ms-sidebar-layout-nav-active-bg-color: #2d2f39;
-  --ms-sidebar-layout-nav-active-text-color: #ffffff80;
-}
 .sidebar-layout--collapsed {
   --ms-sidebar-layout-aside-width: 86px;
   --ms-sidebar-layout-aside-spacing-x: 0.5rem;

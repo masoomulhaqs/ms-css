@@ -1,6 +1,6 @@
 {
   "name": "ms-css",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "description": "a simple css library",
   "main": "gulpfile.mjs",
   "scripts": {
