@@ -6,6 +6,11 @@
   --#{$prefix}font-family-heading: #{$font-family-heading};
   --#{$prefix}color-tertiary: #{$tertiary};
 
+  // Background Colors
+  @each $key, $value in $background-shade-colors {
+    --#{$prefix}bg-color-#{$key}: #{$value};
+  }
+
   // Shadows
   --#{$prefix}box-shadow: #{$box-shadow-sm};
   --#{$prefix}box-shadow-lg: #{$box-shadow-lg};
@@ -30,7 +35,7 @@
   --#{$prefix}body-font-family: var(--#{$prefix}font-family-body);
 
   // Header
-  --#{$prefix}header-bg: #{$light};
+  --#{$prefix}header-bg: #{$white};
   // --#{$prefix}header-height: -72px;
   --#{$prefix}header-link-font-weight: 700;
   --#{$prefix}header-link-letter-spacing: 0.115em;
@@ -142,12 +147,32 @@
   --#{$prefix}input-focus-bg: #{$input-focus-bg};
 
   --#{$prefix}block-editor-bg: #fff;
+
+  // Layout - Sidebar
+  --ms-sidebar-layout-aside-width: 300px;
+  --ms-sidebar-layout-aside-spacing-x: 1.5rem;
+  --ms-sidebar-layout-aside-spacing-y: 1.5rem;
+  --ms-sidebar-layout-bg-color: #fff;
+  --ms-sidebar-layout-bg-active-color: #f6f6f6;
+  --ms-sidebar-layout-text-color: #757575;
+  --ms-sidebar-layout-text-active-color: #000;
+  --ms-sidebar-layout-nav-hover-text-color: #000;
+  --ms-sidebar-layout-nav-active-bg-color: #f6f6f6;
+  --ms-sidebar-layout-nav-active-text-color: #000;
 }
 
 @include color-mode("dark", true) {
+  // Background Colors
+  @each $key, $value in $background-shade-colors-dark {
+    --#{$prefix}bg-color-#{$key}: #{$value};
+  }
+
   @each $key, $value in $grays-dark {
     --#{$prefix}gray-#{$key}-dark: #{$value};
   }
+
+  // Header
+  --#{$prefix}header-bg: var(--#{$prefix}bg-color-2);
 
   --#{$prefix}body-color: #{$body-color-dark};
   --#{$prefix}body-color-rgb: #{to-rgb($body-color-dark)};
@@ -171,7 +196,6 @@
   --#{$prefix}tertiary-bg-rgb: #{to-rgb($body-tertiary-bg-dark)};
 
   // Forms
-
   --#{$prefix}select-bg-color: transparent;
   --#{$prefix}select-border-color: var(--ms-border-color);
   --#{$prefix}select-opened-bg-color: var(--#{$prefix}select-bg-color);
@@ -188,4 +212,23 @@
   --#{$prefix}input-label-color: #93a1a1;
 
   --#{$prefix}block-editor-bg: var(--#{$prefix}input-bg);
+
+  // Layout - Sidebar
+  // --ms-sidebar-layout-bg-color: #161a23;
+  // --ms-sidebar-layout-bg-active-color: #2d2f39;
+  // --ms-sidebar-layout-text-color: #67696c;
+  // --ms-sidebar-layout-text-active-color: #ffffff80;
+
+  // --ms-sidebar-layout-nav-hover-text-color: #ffffff80;
+  // --ms-sidebar-layout-nav-active-bg-color: #2d2f39;
+  // --ms-sidebar-layout-nav-active-text-color: #ffffff80;
+
+  --ms-sidebar-layout-bg-color: var(--#{$prefix}bg-color-2);
+  --ms-sidebar-layout-bg-active-color: #53595d80;
+  --ms-sidebar-layout-text-color: #93a1a1;
+  --ms-sidebar-layout-text-active-color: #ffffff80;
+
+  --ms-sidebar-layout-nav-hover-text-color: #ffffff80;
+  --ms-sidebar-layout-nav-active-bg-color: #2d2f39;
+  --ms-sidebar-layout-nav-active-text-color: #ffffff80;
 }

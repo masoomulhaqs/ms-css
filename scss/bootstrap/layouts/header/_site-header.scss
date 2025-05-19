@@ -1,9 +1,5 @@
 .site-header {
-  background-color: var(--ms-white);
-
-  @include ms-color-mode("dark") {
-    --ms-white: #252526;
-  }
+  background-color: var(--#{$prefix}header-bg);
 
   @include media-breakpoint-below-desktop() {
     padding-inline: 0 !important;

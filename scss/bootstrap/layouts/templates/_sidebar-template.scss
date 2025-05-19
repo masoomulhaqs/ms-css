@@ -1,35 +1,4 @@
 .sidebar-layout {
-  --ms-sidebar-layout-aside-width: 300px;
-  --ms-sidebar-layout-aside-spacing-x: 1.5rem;
-  --ms-sidebar-layout-aside-spacing-y: 1.5rem;
-  --ms-sidebar-layout-bg-color: #fff;
-  --ms-sidebar-layout-bg-active-color: #f6f6f6;
-  --ms-sidebar-layout-text-color: #757575;
-  --ms-sidebar-layout-text-active-color: #000;
-  --ms-sidebar-layout-nav-hover-text-color: #000;
-  --ms-sidebar-layout-nav-active-bg-color: #f6f6f6;
-  --ms-sidebar-layout-nav-active-text-color: #000;
-
-  @include ms-color-mode(dark) {
-    // --ms-sidebar-layout-bg-color: #161a23;
-    // --ms-sidebar-layout-bg-active-color: #2d2f39;
-    // --ms-sidebar-layout-text-color: #67696c;
-    // --ms-sidebar-layout-text-active-color: #ffffff80;
-
-    // --ms-sidebar-layout-nav-hover-text-color: #ffffff80;
-    // --ms-sidebar-layout-nav-active-bg-color: #2d2f39;
-    // --ms-sidebar-layout-nav-active-text-color: #ffffff80;
-
-    --ms-sidebar-layout-bg-color: #252526;
-    --ms-sidebar-layout-bg-active-color: #53595d80;
-    --ms-sidebar-layout-text-color: #93a1a1;
-    --ms-sidebar-layout-text-active-color: #ffffff80;
-
-    --ms-sidebar-layout-nav-hover-text-color: #ffffff80;
-    --ms-sidebar-layout-nav-active-bg-color: #2d2f39;
-    --ms-sidebar-layout-nav-active-text-color: #ffffff80;
-  }
-
   &--collapsed {
     @include sidebar-collapsed-styles();
   }

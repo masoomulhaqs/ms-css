@@ -112,6 +112,11 @@ table {
       border-bottom: 0;
       white-space: nowrap;
     }
+
+    &.table-primary {
+      --#{$prefix}table-bg: var(--#{$prefix}bg-color-5);
+      --ms-table-color: var(--#{$prefix}body-color);
+    }
   }
 
   tbody {
@@ -123,7 +128,7 @@ table {
   tr {
     &.is-muted {
       td {
-        background: var(--ms-gray-200);
+        background: var(--ms-bg-color-4);
         color: var(--ms-gray-600);
 
         > a {

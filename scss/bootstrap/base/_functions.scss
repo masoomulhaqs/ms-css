@@ -4,3 +4,27 @@
   $remValue: unquote(math.div($value, 16) + "rem");
   @return $remValue;
 }
+
+@function get-dark-shades($base-color: #1f1f1f, $increment: 9%) {
+  $shades: ();
+
+  @for $i from 1 through 6 {
+    $lightness: ($i - 1) * $increment;
+    $shade: lighten($base-color, $lightness);
+    $shades: map-merge($shades, (#{$i}: $shade));
+  }
+
+  @return $shades;
+}
+
+@function get-light-shades($base-color: #fff, $increment: 9%) {
+  $shades: ();
+
+  @for $i from 1 through 6 {
+    $lightness: ($i - 1) * $increment;
+    $shade: darken($base-color, $lightness);
+    $shades: map-merge($shades, (#{$i}: $shade));
+  }
+
+  @return $shades;
+}

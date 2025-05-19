@@ -6,6 +6,16 @@ $font-family-default: system-ui, -apple-system, "Segoe UI", Roboto,
 $font-family-base: $font-family-default !default;
 $font-family-heading: $font-family-default !default;
 
+// Colors
+$background-shade-colors: (
+  "1": #ffffff,
+  "2": #d9d9d9,
+  "3": #c6c6c6,
+  "4": #b3b3b3,
+  "5": #a1a1a1,
+  "6": #909090,
+);
+
 // Buttons
 $btn-icon-font-size: 14px !default;
 
