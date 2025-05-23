@@ -1,3 +1,12 @@
+# [1.10.0](https://github.com/masoomulhaqs/ms-css/compare/v1.9.0...v1.10.0) (2025-05-23)
+
+
+### Features
+
+* data table theme specific changes ([c7ee66a](https://github.com/masoomulhaqs/ms-css/commit/c7ee66acf7b7dca87db7c2bc45c0af0bd5ee7d42))
+
+
+
 # [1.9.0](https://github.com/masoomulhaqs/ms-css/compare/v1.8.0...v1.9.0) (2025-05-19)
 
 

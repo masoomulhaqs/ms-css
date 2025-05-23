@@ -22351,7 +22351,7 @@ table.table-no-borders tbody td {
   border-bottom: 0;
   white-space: nowrap;
 }
-.ms-table thead.table-primary {
+[data-bs-theme=dark] .ms-table thead.table-primary {
   --ms-table-bg: var(--ms-bg-color-5);
   --ms-table-color: var(--ms-body-color);
 }
@@ -22359,10 +22359,17 @@ table.table-no-borders tbody td {
   vertical-align: middle;
 }
 .ms-table tr.is-muted td {
-  background: var(--ms-bg-color-4);
+  background: var(--ms-bg-color-2);
   color: var(--ms-gray-600);
 }
 .ms-table tr.is-muted td > a {
+  color: inherit !important;
+}
+.ms-table tr.is-subtle td {
+  background: var(--ms-bg-color-2);
+  color: var(--ms-gray-600);
+}
+.ms-table tr.is-subtle td > a {
   color: inherit !important;
 }
 .ms-table button.btn-column-action-dropdown-toggle:after {
