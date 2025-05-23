@@ -114,8 +114,10 @@ table {
     }
 
     &.table-primary {
-      --#{$prefix}table-bg: var(--#{$prefix}bg-color-5);
-      --ms-table-color: var(--#{$prefix}body-color);
+      @include ms-color-mode(dark) {
+        --#{$prefix}table-bg: var(--#{$prefix}bg-color-5);
+        --#{$prefix}table-color: var(--#{$prefix}body-color);
+      }
     }
   }
 
@@ -128,7 +130,18 @@ table {
   tr {
     &.is-muted {
       td {
-        background: var(--ms-bg-color-4);
+        background: var(--ms-bg-color-2);
+        color: var(--ms-gray-600);
+
+        > a {
+          color: inherit !important;
+        }
+      }
+    }
+
+    &.is-subtle {
+      td {
+        background: var(--ms-bg-color-2);
         color: var(--ms-gray-600);
 
         > a {
